@@ -100,5 +100,12 @@ h1 {
   margin-top: 1vh;
   margin-bottom: 1vh;
 }
-.comment-pic-likes {
+.detail-header {
+  text-align: center;
+}
+.detail-header img {
+  border-radius: 50%;
+  border: 2px solid black;
+  width: 15vw;
+  height: 25vh;
 }

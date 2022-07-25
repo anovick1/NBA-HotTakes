@@ -16,9 +16,9 @@ const ProfileDetails = (props) => {
       <div className="detail-header">
         <h1>{user.name}</h1>{' '}
         <a href={user.url}>
-          <img src={user.image} alt={user.name} />
+          <img src={user.pfp} alt={user.name} />
         </a>
-        <h3>{user.address}</h3>
+        <h3>{user.bio}</h3>
       </div>
       <div className="reviews">
         <h1>Posts</h1>

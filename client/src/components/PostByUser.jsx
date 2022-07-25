@@ -5,7 +5,6 @@ const PostByUser = (props) => {
   let navigate = useNavigate()
 
   const showPost = (user) => {
-    console.log(user)
     navigate(`/home/${user}`)
   }
   return (

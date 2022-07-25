@@ -7,6 +7,9 @@ const Post = (props) => {
   const showPost = (user) => {
     navigate(`${user._id}`)
   }
+  const showPost1 = (user) => {
+    navigate(`/home/${user}`)
+  }
 
   return (
     <div className="newsfeed">
@@ -43,7 +46,12 @@ const Post = (props) => {
                     <div className="comment-pfp">
                       <img src={comment.pfp} alt="commenter-pfp" />
                     </div>
-                    <div className="comment-username">{comment.username}: </div>
+                    <div
+                      onClick={() => showPost1(comment.user)}
+                      className="comment-username"
+                    >
+                      {comment.username}:{' '}
+                    </div>
                     <div className="comment-text">{comment.text}</div>
                     <div className="comment-likes"> 👍{comment.likes}</div>
                   </div>

@@ -11,7 +11,9 @@ const Header = (props) => {
           <Link to="/home">Home</Link>
         </div>
         <div>
-          <Link to="/">{props.currentUser.username}</Link>
+          <Link to={'/home/' + props.currentUser.id}>
+            {props.currentUser.username}
+          </Link>
         </div>
       </nav>
     </header>

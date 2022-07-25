@@ -11,7 +11,12 @@ const App = () => {
   const [users, setUsers] = useState([])
   const [posts, setPosts] = useState([])
   const [comments, setComments] = useState([])
-  const [currentUser, setCurrentUser] = useState([])
+  const [currentUser, setCurrentUser] = useState({
+    id: '',
+    username: '',
+    name: '',
+    pfp: ''
+  })
 
   useEffect(() => {
     const getUsers = async () => {
@@ -45,6 +50,7 @@ const App = () => {
               <Login
                 currentUser={currentUser}
                 setCurrentUser={setCurrentUser}
+                users={users}
               />
             }
           />
