@@ -1,5 +1,5 @@
 const db = require('../db')
-const { User, Post } = require('../models')
+const { User, Post, Comment } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -83,7 +83,7 @@ const main = async () => {
   //   twitterUrl: ''
   // })
   // await skip.save()
-  const reviews = [
+  const posts = [
     {
       user: stephen._id,
       title: 'Kyrie Franchise Destroyer',
@@ -154,81 +154,81 @@ const main = async () => {
     // },
   ]
 
-  await Post.insertMany(reviews)
+  await Post.insertMany(posts)
 
   const comments = [
     {
-      post: reviews[0]._id,
+      post: posts[0]._id,
       user: kd._id,
       date: '6/30/2022',
       text: 'Facts and steph was way better.',
       likes: '4'
     },
     {
-      post: reviews[0]._id,
+      post: posts[0]._id,
       user: skip._id,
       date: '6/30/2022',
       text: 'LeBron is crying for Kyrie to go to the Lakers. So soft.',
       likes: '23'
     },
     {
-      post: reviews[1]._id,
+      post: posts[1]._id,
       user: dray._id,
       date: '4/16/2022',
       text: 'Bron at 9???? Are you kidding? Where is steph?!??!? The old media.....',
       likes: '42'
     },
     {
-      post: reviews[2]._id,
+      post: posts[2]._id,
       user: jj._id,
       date: '7/22/2022',
       text: "You know, I don't hate this. If he can stay healthy AD and the Lakers are going to be scary. I just find it hard to believe that he will out produce Bron ",
       likes: '56'
     },
     {
-      post: reviews[3]._id,
+      post: posts[3]._id,
       user: perk._id,
       date: '7/25/2022',
       text: 'You are an absolute idiot',
       likes: '35'
     },
     {
-      post: reviews[3]._id,
+      post: posts[3]._id,
       user: kd._id,
       date: '7/25/2022',
       text: 'LEFRAUD AT 3?! ARE YOU KIDDING ME!!!! Now on Undisputed....',
       likes: '29'
     },
     {
-      post: reviews[4]._id,
+      post: posts[4]._id,
       user: bob._id,
       date: '5/19/2022',
       text: 'And we must have had the best firemen and plumbers on the planet at the time. And I was very proud to play with all of them.',
       likes: '57'
     },
     {
-      post: reviews[4]._id,
+      post: posts[4]._id,
       user: jerry._id,
       date: '7/22/2022',
       text: 'Tell me what your career looked like. What did he do that determined games? You averaged 12 points a game in the league.',
-      likes: ''
+      likes: '62'
     },
     {
-      post: reviews[4]._id,
+      post: posts[4]._id,
       user: perk._id,
       date: '7/24/2022',
       text: 'Dang yall still mad about this? Bob dribbled with one hand!!!! JJ would smoke you guys. Carry the hell on...',
-      likes: ''
+      likes: '88'
     },
     {
-      post: reviews[5]._id,
+      post: posts[5]._id,
       user: kd._id,
       date: '7/25/2022',
       text: 'I can’t tell you what the results would be, but I do know that steve kerr would’ve demanded that we put steve kerr in as many pick and rolls as possible',
       likes: '43'
     }
     // {
-    //   post: reviews[0]._id,
+    //   post: posts[0]._id,
     //   user: kd._id,
     //   date: '6/30/2022',
     //   text: '',
