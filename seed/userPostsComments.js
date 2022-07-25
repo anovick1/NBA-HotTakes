@@ -53,6 +53,28 @@ const main = async () => {
     twitterUrl: 'https://twitter.com/Money23Green'
   })
   await dray.save()
+  const kd = await new User({
+    username: 'KDTrey5',
+    name: 'Kevin Durant',
+    bio: 'IM ME, I DO ME, AND I CHILL.',
+    pfp: 'https://pbs.twimg.com/profile_images/1422772132283514882/cQIYcqJk_400x400.jpg',
+    twitterUrl: 'https://twitter.com/KDTrey5'
+  })
+  await kd.save()
+  const jerry = await new User({
+    username: 'TheLogo',
+    name: 'Jerry West',
+    bio: 'Jerome Alan West, commonly known as Jerry West, is an American basketball executive and former player. He played professionally for the Los Angeles Lakers of the National Basketball Association.',
+    pfp: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaex8wDY6Td5rFdg58DaNS_6TGM3Hf6O5cDb_S_mDAmO-v0fwz'
+  })
+  await jerry.save()
+  const bob = await new User({
+    username: 'BobCousy',
+    name: 'Bob Cousy',
+    bio: 'I had 29 assists in a game',
+    pfp: 'https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_34/2979876/190821-bob-cousy-cs-1156a.jpg'
+  })
+  await bob.save()
   // const skip = await new User({
   //   username: '',
   //   name: '',
@@ -113,7 +135,7 @@ const main = async () => {
     },
     {
       user: dray._id,
-      title: '2017 Warrios vs 1996 Bulls',
+      title: '2017 Warriors vs 1996 Bulls',
       date: '7/2/2022',
       text: 'I’m watching the 98 Bulls vs Utah in the Finals… I can’t help but notice our 2017 team would’ve beaten these Bulls by a dub and these Jazz by 40 if they’re going to play these brands of basketball. And that’s why it’s dumb to compare Era’s. Learn to appreciate things for what they are. Analyze the game. And stop the unnecessary debating. Yours Truly, The New Media',
       image:
@@ -133,7 +155,90 @@ const main = async () => {
   ]
 
   await Post.insertMany(reviews)
+
+  const comments = [
+    {
+      post: reviews[0]._id,
+      user: kd._id,
+      date: '6/30/2022',
+      text: 'Facts and steph was way better.',
+      likes: '4'
+    },
+    {
+      post: reviews[0]._id,
+      user: skip._id,
+      date: '6/30/2022',
+      text: 'LeBron is crying for Kyrie to go to the Lakers. So soft.',
+      likes: '23'
+    },
+    {
+      post: reviews[1]._id,
+      user: dray._id,
+      date: '4/16/2022',
+      text: 'Bron at 9???? Are you kidding? Where is steph?!??!? The old media.....',
+      likes: '42'
+    },
+    {
+      post: reviews[2]._id,
+      user: jj._id,
+      date: '7/22/2022',
+      text: "You know, I don't hate this. If he can stay healthy AD and the Lakers are going to be scary. I just find it hard to believe that he will out produce Bron ",
+      likes: '56'
+    },
+    {
+      post: reviews[3]._id,
+      user: perk._id,
+      date: '7/25/2022',
+      text: 'You are an absolute idiot',
+      likes: '35'
+    },
+    {
+      post: reviews[3]._id,
+      user: kd._id,
+      date: '7/25/2022',
+      text: 'LEFRAUD AT 3?! ARE YOU KIDDING ME!!!! Now on Undisputed....',
+      likes: '29'
+    },
+    {
+      post: reviews[4]._id,
+      user: bob._id,
+      date: '5/19/2022',
+      text: 'And we must have had the best firemen and plumbers on the planet at the time. And I was very proud to play with all of them.',
+      likes: '57'
+    },
+    {
+      post: reviews[4]._id,
+      user: jerry._id,
+      date: '7/22/2022',
+      text: 'Tell me what your career looked like. What did he do that determined games? You averaged 12 points a game in the league.',
+      likes: ''
+    },
+    {
+      post: reviews[4]._id,
+      user: perk._id,
+      date: '7/24/2022',
+      text: 'Dang yall still mad about this? Bob dribbled with one hand!!!! JJ would smoke you guys. Carry the hell on...',
+      likes: ''
+    },
+    {
+      post: reviews[5]._id,
+      user: kd._id,
+      date: '7/25/2022',
+      text: 'I can’t tell you what the results would be, but I do know that steve kerr would’ve demanded that we put steve kerr in as many pick and rolls as possible',
+      likes: '43'
+    }
+    // {
+    //   post: reviews[0]._id,
+    //   user: kd._id,
+    //   date: '6/30/2022',
+    //   text: '',
+    //   likes: ''
+    // },
+  ]
+
+  await Comment.insertMany(comments)
 }
+
 const run = async () => {
   db.dropDatabase()
   await main()

@@ -7,7 +7,7 @@ const userSchema = new Schema(
     name: { type: String, required: true },
     bio: { type: String, required: true },
     pfp: { type: String, required: true },
-    twitterUrl: { type: String, required: true }
+    twitterUrl: { type: String, required: false }
   },
   { timestamps: true }
 )
