@@ -3,7 +3,10 @@ const Schema = mongoose.Schema
 
 const postSchema = new Schema(
   {
-    user: { type: Schema.Types.ObjectId, ref: 'User' },
+    user: { type: String, ref: 'User' },
+    name: { type: String, ref: 'User' },
+    username: { type: String, ref: 'User' },
+    pfp: { type: String, ref: 'User' },
     title: { type: String, required: true },
     date: { type: String, required: true },
     text: { type: String, required: true },

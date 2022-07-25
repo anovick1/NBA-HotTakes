@@ -26,3 +26,37 @@ h1 {
   max-width: 50vw;
   max-height: 50vh;
 }
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  text-align: left;
+}
+
+.post-fino h1 {
+  text-align: left;
+}
+
+.post-name {
+  margin-top: 5vh;
+  margin-left: 1.5vw;
+}
+
+.post-username,
+.post-date {
+  margin-top: 0.2vh;
+  margin-bottom: 0.2vh;
+}
+
+.pfp-name {
+  display: flex;
+}
+
+.pfp-name img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-top: 2vh;
+}

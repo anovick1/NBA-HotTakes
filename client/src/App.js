@@ -69,7 +69,7 @@ const App = () => {
             }
           />
           <Route
-            path="/:id"
+            path="/home/:id"
             element={
               <>
                 <Header

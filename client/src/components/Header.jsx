@@ -10,7 +10,6 @@ const Header = (props) => {
         <div>
           <Link to="/home">Home</Link>
         </div>
-        {console.log(props.currentUser)}
         <div>
           <Link to="/">{props.currentUser.username}</Link>
         </div>
