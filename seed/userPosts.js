@@ -1,41 +1,66 @@
 const db = require('../db')
-const { Park, Review } = require('../models')
+const { User, Post } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-  const disneyland = await new Park({
-    name: 'Disneyland',
-    address: '1313 Disneyland Dr Anaheim, CA',
-    url: 'https://disneyland.disney.go.com/',
-    image:
-      'https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/disneyland/attractions/disneyland/sleeping-beauty-castle-walkthrough/sleeping-beauty-castle-exterior-16x9.jpg?1593556896598'
+  const stevenA = await new User({
+    username: 'stephenasmith',
+    name: 'Stephen A Smith',
+    bio: 'The real Stephen A. Smith',
+    pfp: 'https://pbs.twimg.com/profile_images/1404454966790529029/I8hVs97x_400x400.jpg',
+    twitterUrl:
+      'https://twitter.com/stephenasmith?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'
   })
-  await disneyland.save()
-  const sixFlags = await new Park({
-    name: 'Six Flags',
-    address: '13710 Central Ave, Bowie, MD 20721',
-    url: 'https://www.sixflags.com/america',
-    image:
-      'https://sf-static.sixflags.com/wp-content/uploads/2020/04/sfa-coaster.jpg'
+  await stevenA.save()
+  const skip = await new User({
+    username: 'RealSkipBayless',
+    name: 'Skip Bayless',
+    bio: 'Daily sports truth, hottest sports debate on TV, 9:30AM - 12:00 EST. Fox Sports 1, Maybe not what you want to hear, but need to hear.',
+    pfp: 'https://pbs.twimg.com/profile_images/778012625858768897/HE2EmvNo_400x400.jpg',
+    twitterUrl: 'https://twitter.com/RealSkipBayless'
   })
-  await sixFlags.save()
-  const dollywood = await new Park({
-    name: 'Dollywood',
-    address: '2700 Dollywood Parks Blvd, Pigeon Forge, TN',
-    url: 'https://www.dollywood.com/',
-    image:
-      'https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-03/220328-dollywood-mb-1156-380d7b.jpg'
+  await skip.save()
+  const perk = await new User({
+    username: 'KendrickPerkins',
+    name: 'Kendrick Perkins',
+    bio: 'I’m not for everybody and I ain’t trying to be!!! Carry on…',
+    pfp: 'https://pbs.twimg.com/profile_images/1547601139243163648/ZYpwBLNS_400x400.jpg',
+    twitterUrl: 'https://twitter.com/KendrickPerkins'
   })
-  await dollywood.save()
-  const disneyworld = await new Park({
-    name: 'Walt Disney World',
-    address: '1375 E Buena Vista Dr Orlando, FL',
-    url: 'https://disneyworld.disney.go.com/vacation-planning/',
-    image:
-      'https://www.travelandleisure.com/thmb/9MPWdqyhl8T8bjI8Q8OA1QCGdjs=/1800x1200/filters:fill(auto,1)/cinderellas-castle-disneyworld-DISPLUSSALE0422-b8989ddbc34f4c2d87c83bf08f498cbd.jpg'
+  await perk.save()
+  const nick = await new User({
+    username: 'getnickwright',
+    name: 'Nick Wright',
+    bio: 'I am always right',
+    pfp: 'https://pbs.twimg.com/profile_images/1526765867232645126/93BR_VmU_400x400.jpg',
+    twitterUrl: 'https://twitter.com/getnickwright'
   })
-  await disneyworld.save()
+  await nick.save()
+  const jj = await new User({
+    username: 'jj_redick',
+    name: 'JJ Redick',
+    bio: 'Dad. Husband. Retired NBA Player.  On TV sometimes. Interstellar stan. Wine. Golf. Co-host of @OldManandThree podcast.',
+    pfp: 'https://pbs.twimg.com/profile_images/1392521402641694721/oVuCIUCD_400x400.jpg',
+    twitterUrl: 'https://twitter.com/jj_redick'
+  })
+  await jj.save()
+  const dray = await new User({
+    username: 'Money23Green',
+    name: 'Draymond Green',
+    bio: 'Forward for the Golden State Warriors by way of Michigan State and Saginaw Michigan... Owner of Performance Inspired Nutrition',
+    pfp: 'https://pbs.twimg.com/profile_images/724646772337872899/b2OtF-YK_400x400.jpg',
+    twitterUrl: 'https://twitter.com/Money23Green'
+  })
+  await dray.save()
+  // const skip = await new User({
+  //   username: '',
+  //   name: '',
+  //   bio: '',
+  //   pfp: '',
+  //   twitterUrl: ''
+  // })
+  // await skip.save()
   const reviews = [
     {
       name: 'Daniel M.',
