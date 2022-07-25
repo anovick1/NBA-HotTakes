@@ -51,41 +51,43 @@ const App = () => {
           <Route
             path="/home"
             element={
-              <Header
-                currentUser={currentUser}
-                setCurrentUser={setCurrentUser}
-              />
+              <>
+                <Header
+                  currentUser={currentUser}
+                  setCurrentUser={setCurrentUser}
+                />
+                <Home
+                  users={users}
+                  posts={posts}
+                  comments={comments}
+                  setPosts={setPosts}
+                  setComments={setComments}
+                  currentUser={currentUser}
+                  setCurrentUser={setCurrentUser}
+                />
+              </>
             }
           />
-          <Route
-            path="/home"
-            element={
-              <Home
-                users={users}
-                posts={posts}
-                comments={comments}
-                setPosts={setPosts}
-                setComments={setComments}
-                currentUser={currentUser}
-                setCurrentUser={setCurrentUser}
-              />
-            }
-          />
-          {/* <Route path="/:id" element={<Header />} />
           <Route
             path="/:id"
             element={
-              <PostDetails
-                users={users}
-                posts={posts}
-                comments={comments}
-                setPosts={setPosts}
-                setComments={setComments}
-                currentUser={currentUser}
-                setCurrentUser={setCurrentUser}
-              />
+              <>
+                <Header
+                  currentUser={currentUser}
+                  setCurrentUser={setCurrentUser}
+                />
+                <PostDetails
+                  users={users}
+                  posts={posts}
+                  comments={comments}
+                  setPosts={setPosts}
+                  setComments={setComments}
+                  currentUser={currentUser}
+                  setCurrentUser={setCurrentUser}
+                />
+              </>
             }
-          /> */}
+          />
         </Routes>
       </main>
     </div>
