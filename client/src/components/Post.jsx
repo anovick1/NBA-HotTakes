@@ -31,6 +31,20 @@ const Post = (props) => {
             <h3>
               👍 {post.likes} 👎 {post.dislikes}
             </h3>
+            <div className="comments">
+              {props.comments
+                .filter((c) => c.post === post._id)
+                .map((comment) => (
+                  <div key={comment.text}>
+                    <div className="comment-pfp">
+                      <img src={comment.pfp} alt="commenter-pfp" />
+                    </div>
+                    <div className="comment-username">{comment.username}</div>
+                    <div className="comment-text">{comment.text}</div>
+                    <div className="comment-likes"> 👍{comment.likes}</div>
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
       ))}

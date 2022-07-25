@@ -171,6 +171,8 @@ const main = async () => {
     {
       post: post1._id,
       user: kd._id,
+      username: kd.username,
+      pfp: kd.pfp,
       date: '6/30/2022',
       text: 'Facts and steph was way better.',
       likes: '4'
@@ -178,6 +180,8 @@ const main = async () => {
     {
       post: post1._id,
       user: skip._id,
+      username: skip.username,
+      pfp: skip.pfp,
       date: '6/30/2022',
       text: 'LeBron is crying for Kyrie to go to the Lakers. So soft.',
       likes: '23'
@@ -185,6 +189,8 @@ const main = async () => {
     {
       post: post2._id,
       user: dray._id,
+      username: dray.username,
+      pfp: dray.pfp,
       date: '4/16/2022',
       text: 'Bron at 9???? Are you kidding? Where is steph?!??!? The old media.....',
       likes: '42'
@@ -192,6 +198,8 @@ const main = async () => {
     {
       post: post3._id,
       user: jj._id,
+      username: jj.username,
+      pfp: jj.pfp,
       date: '7/22/2022',
       text: "You know, I don't hate this. If he can stay healthy AD and the Lakers are going to be scary. I just find it hard to believe that he will out produce Bron ",
       likes: '56'
@@ -199,6 +207,8 @@ const main = async () => {
     {
       post: post4._id,
       user: perk._id,
+      username: perk.username,
+      pfp: perk.pfp,
       date: '7/25/2022',
       text: 'You are an absolute idiot',
       likes: '35'
@@ -206,6 +216,8 @@ const main = async () => {
     {
       post: post4._id,
       user: kd._id,
+      username: kd.username,
+      pfp: kd.pfp,
       date: '7/25/2022',
       text: 'LEFRAUD AT 3?! ARE YOU KIDDING ME!!!! Now on Undisputed....',
       likes: '29'
@@ -213,6 +225,8 @@ const main = async () => {
     {
       post: post5._id,
       user: bob._id,
+      username: bob.username,
+      pfp: bob.pfp,
       date: '5/19/2022',
       text: 'And we must have had the best firemen and plumbers on the planet at the time. And I was very proud to play with all of them.',
       likes: '57'
@@ -220,6 +234,8 @@ const main = async () => {
     {
       post: post5._id,
       user: jerry._id,
+      username: jerry.username,
+      pfp: jerry.pfp,
       date: '7/22/2022',
       text: 'Tell me what your career looked like. What did he do that determined games? You averaged 12 points a game in the league.',
       likes: '62'
@@ -227,6 +243,8 @@ const main = async () => {
     {
       post: post5._id,
       user: perk._id,
+      username: perk.username,
+      pfp: perk.pfp,
       date: '7/24/2022',
       text: 'Dang yall still mad about this? Bob dribbled with one hand!!!! JJ would smoke you guys. Carry the hell on...',
       likes: '88'
@@ -234,6 +252,8 @@ const main = async () => {
     {
       post: post6._id,
       user: kd._id,
+      username: kd.username,
+      pfp: kd.pfp,
       date: '7/25/2022',
       text: 'I can’t tell you what the results would be, but I do know that steve kerr would’ve demanded that we put steve kerr in as many pick and rolls as possible',
       likes: '43'
