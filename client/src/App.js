@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './components/Login.jsx'
-import PostDetails from './components/PostDetails'
+import ProfileDetails from './components/ProfileDetails'
 import axios from 'axios'
 import Header from './components/Header'
 
@@ -76,7 +76,7 @@ const App = () => {
                   currentUser={currentUser}
                   setCurrentUser={setCurrentUser}
                 />
-                <PostDetails
+                <ProfileDetails
                   users={users}
                   posts={posts}
                   comments={comments}

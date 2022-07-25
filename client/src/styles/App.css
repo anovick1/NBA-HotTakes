@@ -49,6 +49,10 @@ h1 {
   margin-bottom: 0.2vh;
 }
 
+.post-username,
+.comment-username {
+  cursor: pointer;
+}
 .pfp-name {
   display: flex;
 }

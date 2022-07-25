@@ -1,22 +1,17 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
 
 const Post = (props) => {
-  const [poster, setPoster] = useState([])
-  let id = ''
-  let p
   let navigate = useNavigate()
 
-  const showPost = (post) => {
-    navigate(`${post._id}`)
+  const showPost = (user) => {
+    navigate(`${user._id}`)
   }
 
   return (
     <div className="newsfeed">
       {props.posts.map((post) => (
-        <div key={post.title} onClick={() => showPost(post)}>
+        <div key={post.title}>
           <div className="post">
             {props.users
               .filter((u) => u._id === post.user)
@@ -26,7 +21,9 @@ const Post = (props) => {
                     <img src={user.pfp} alt="pfp" />
                     <h2 className="post-name">{user.name}</h2>
                   </div>
-                  <h3 className="post-username">@{user.username}</h3>
+                  <h3 onClick={() => showPost(user)} className="post-username">
+                    @{user.username}
+                  </h3>
                   <p className="post-date">{post.date}</p>
                 </div>
               ))}
