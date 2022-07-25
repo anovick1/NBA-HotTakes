@@ -110,8 +110,7 @@ const main = async () => {
     title: '2023 MVP: AD',
     date: '7/22/2022',
     text: 'Carry the hell on...',
-    image:
-      'https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/294772255_988508585123714_3070357481975207067_n.jpg?stp=dst-jpg_e35_p480x480&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=102&_nc_ohc=DwXt6tIOt8UAX_HFA4s&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=Mjg4Njc0NDc1NjQzMDAyNzg0Ng%3D%3D.2-ccb7-5&oh=00_AT9Gsj0fMFIrA52zcD7S__DcPlIlSHZW1dKFjKNktLkfUA&oe=62E6830D&_nc_sid=30a2ef',
+    image: 'https://i.ytimg.com/vi/-jf_eH0azTQ/maxresdefault.jpg',
     likes: '27',
     dislikes: '65'
   })
@@ -123,7 +122,7 @@ const main = async () => {
     date: '7/24/2022',
     text: 'Whats Wright? with Nick Wright',
     image:
-      'https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/295490109_795315741635748_3364723592952539074_n.jpg?stp=dst-jpg_e35_p480x480&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=100&_nc_ohc=CdHm5c5TM3EAX_K2GEc&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=Mjg4OTU1MjgxOTE5MjkzMTQzMw%3D%3D.2-ccb7-5&oh=00_AT-wPHXuiTjX2kugCUYErIC4Lw55q9gA-PgeaZ9eMJDhMA&oe=62E63E5F&_nc_sid=30a2ef',
+      'https://pbs.twimg.com/media/FWwXuatWIAIwtc2?format=jpg&name=900x900',
     likes: '3',
     dislikes: '105'
   })

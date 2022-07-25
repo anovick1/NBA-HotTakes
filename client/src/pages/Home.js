@@ -1,9 +1,20 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Header from '../components/Header'
+import Post from '../components/Post'
 
 const Home = (props) => {
-  return <div>"home</div>
+  return (
+    <div>
+      <h1>Newsfeed</h1>
+      <Post
+        users={props.users}
+        posts={props.posts}
+        comments={props.comments}
+        setPosts={props.setPosts}
+        setComments={props.setComments}
+      />
+    </div>
+  )
 }
 
 export default Home
