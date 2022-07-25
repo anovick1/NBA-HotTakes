@@ -83,157 +83,144 @@ const main = async () => {
   //   twitterUrl: ''
   // })
   // await skip.save()
-  const posts = [
-    {
-      user: stephen._id,
-      title: 'Kyrie Franchise Destroyer',
-      date: '6/30/2022',
-      text: 'I feel that Kyrie Irving ruined the franchise,” Smith stated. “I feel that all of this is his doing. If Kyrie Irving had shown up to work, if he had been a more consistent presence, then he’d still be in Brooklyn. KD would still wanna be in Brooklyn. They probably might have won a championship, or at least would at least be knocking on the door again',
-      image: 'https://i.ytimg.com/vi/FJXOPH5qPcU/maxresdefault.jpg',
-      likes: '40',
-      dislikes: '25'
-    },
-    {
-      user: skip._id,
-      title: 'Updated top 10',
-      date: '4/15/2022',
-      text: 'Here is my updated top 10 list. Now on Undisputed',
-      image:
-        'https://pbs.twimg.com/media/FYeIsmWXEAE_kvv?format=jpg&name=900x900',
-      likes: '17',
-      dislikes: '63'
-    },
-    {
-      user: perk._id,
-      title: '2023 MVP: AD',
-      date: '7/22/2022',
-      text: 'Carry the hell on...',
-      image:
-        'https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/294772255_988508585123714_3070357481975207067_n.jpg?stp=dst-jpg_e35_p480x480&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=102&_nc_ohc=DwXt6tIOt8UAX_HFA4s&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=Mjg4Njc0NDc1NjQzMDAyNzg0Ng%3D%3D.2-ccb7-5&oh=00_AT9Gsj0fMFIrA52zcD7S__DcPlIlSHZW1dKFjKNktLkfUA&oe=62E6830D&_nc_sid=30a2ef',
-      likes: '27',
-      dislikes: '65'
-    },
-    {
-      user: nick._id,
-      title: 'Top 50 players in the last 50 years',
-      date: '7/24/2022',
-      text: 'Whats Wright? with Nick Wright',
-      image:
-        'https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/295490109_795315741635748_3364723592952539074_n.jpg?stp=dst-jpg_e35_p480x480&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=100&_nc_ohc=CdHm5c5TM3EAX_K2GEc&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=Mjg4OTU1MjgxOTE5MjkzMTQzMw%3D%3D.2-ccb7-5&oh=00_AT-wPHXuiTjX2kugCUYErIC4Lw55q9gA-PgeaZ9eMJDhMA&oe=62E63E5F&_nc_sid=30a2ef',
-      likes: '3',
-      dislikes: '105'
-    },
-    {
-      user: jj._id,
-      title: 'Plumbers and Firemen',
-      date: '4/20/2022',
-      text: "Back in those days, competition wasn’t anywhere near what it is in today’s NBA. NBA players weren’t even full-time athletes and during the offseason they’d have regular nine to five jobs. Cousy can't be compared to players who played before 1980 and how he never shot above 40% in his entire career. He was being guarded by plumbers and firemen ",
-      image:
-        'https://brobible.com/wp-content/uploads/2022/04/jjredick.jpg?w=640',
-      likes: '116',
-      dislikes: '62'
-    },
-    {
-      user: dray._id,
-      title: '2017 Warriors vs 1996 Bulls',
-      date: '7/2/2022',
-      text: 'I’m watching the 98 Bulls vs Utah in the Finals… I can’t help but notice our 2017 team would’ve beaten these Bulls by a dub and these Jazz by 40 if they’re going to play these brands of basketball. And that’s why it’s dumb to compare Era’s. Learn to appreciate things for what they are. Analyze the game. And stop the unnecessary debating. Yours Truly, The New Media',
-      image:
-        'https://www.nbcsports.com/sites/rsnunited/files/archive/assets_media_gallery/chicago/2020/04/15/bullsdubs_landscape_chi.jpg',
-      likes: '82',
-      dislikes: '66'
-    }
-    // ,{
-    //   user: stephen._id,
-    //   title: '',
-    //   date: '7/2/2022',
-    //   text: '',
-    //   image: "",
-    //   likes: '',
-    //   dislikes: ""
-    // },
-  ]
+  const post1 = await new Post({
+    user: stephen._id,
+    title: 'Kyrie Franchise Destroyer',
+    date: '6/30/2022',
+    text: 'I feel that Kyrie Irving ruined the franchise,” Smith stated. “I feel that all of this is his doing. If Kyrie Irving had shown up to work, if he had been a more consistent presence, then he’d still be in Brooklyn. KD would still wanna be in Brooklyn. They probably might have won a championship, or at least would at least be knocking on the door again',
+    image: 'https://i.ytimg.com/vi/FJXOPH5qPcU/maxresdefault.jpg',
+    likes: '40',
+    dislikes: '25'
+  })
+  await post1.save()
+  const post2 = await new Post({
+    user: skip._id,
+    title: 'Updated top 10',
+    date: '4/15/2022',
+    text: 'Here is my updated top 10 list. Now on Undisputed',
+    image:
+      'https://pbs.twimg.com/media/FYeIsmWXEAE_kvv?format=jpg&name=900x900',
+    likes: '17',
+    dislikes: '63'
+  })
+  await post2.save()
 
-  await Post.insertMany(posts)
+  const post3 = await new Post({
+    user: perk._id,
+    title: '2023 MVP: AD',
+    date: '7/22/2022',
+    text: 'Carry the hell on...',
+    image:
+      'https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/294772255_988508585123714_3070357481975207067_n.jpg?stp=dst-jpg_e35_p480x480&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=102&_nc_ohc=DwXt6tIOt8UAX_HFA4s&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=Mjg4Njc0NDc1NjQzMDAyNzg0Ng%3D%3D.2-ccb7-5&oh=00_AT9Gsj0fMFIrA52zcD7S__DcPlIlSHZW1dKFjKNktLkfUA&oe=62E6830D&_nc_sid=30a2ef',
+    likes: '27',
+    dislikes: '65'
+  })
+  await post3.save()
+
+  const post4 = await new Post({
+    user: nick._id,
+    title: 'Top 50 players in the last 50 years',
+    date: '7/24/2022',
+    text: 'Whats Wright? with Nick Wright',
+    image:
+      'https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/295490109_795315741635748_3364723592952539074_n.jpg?stp=dst-jpg_e35_p480x480&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=100&_nc_ohc=CdHm5c5TM3EAX_K2GEc&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=Mjg4OTU1MjgxOTE5MjkzMTQzMw%3D%3D.2-ccb7-5&oh=00_AT-wPHXuiTjX2kugCUYErIC4Lw55q9gA-PgeaZ9eMJDhMA&oe=62E63E5F&_nc_sid=30a2ef',
+    likes: '3',
+    dislikes: '105'
+  })
+  await post4.save()
+  const post5 = await new Post({
+    user: jj._id,
+    title: 'Plumbers and Firemen',
+    date: '4/20/2022',
+    text: "Back in those days, competition wasn’t anywhere near what it is in today’s NBA. NBA players weren’t even full-time athletes and during the offseason they’d have regular nine to five jobs. Cousy can't be compared to players who played before 1980 and how he never shot above 40% in his entire career. He was being guarded by plumbers and firemen ",
+    image: 'https://brobible.com/wp-content/uploads/2022/04/jjredick.jpg?w=640',
+    likes: '116',
+    dislikes: '62'
+  })
+  await post5.save()
+  const post6 = await new Post({
+    user: dray._id,
+    title: '2017 Warriors vs 1996 Bulls',
+    date: '7/2/2022',
+    text: 'I’m watching the 98 Bulls vs Utah in the Finals… I can’t help but notice our 2017 team would’ve beaten these Bulls by a dub and these Jazz by 40 if they’re going to play these brands of basketball. And that’s why it’s dumb to compare Era’s. Learn to appreciate things for what they are. Analyze the game. And stop the unnecessary debating. Yours Truly, The New Media',
+    image:
+      'https://www.nbcsports.com/sites/rsnunited/files/archive/assets_media_gallery/chicago/2020/04/15/bullsdubs_landscape_chi.jpg',
+    likes: '82',
+    dislikes: '66'
+  })
+  await post6.save()
 
   const comments = [
     {
-      post: posts[0]._id,
+      post: post1._id,
       user: kd._id,
       date: '6/30/2022',
       text: 'Facts and steph was way better.',
       likes: '4'
     },
     {
-      post: posts[0]._id,
+      post: post1._id,
       user: skip._id,
       date: '6/30/2022',
       text: 'LeBron is crying for Kyrie to go to the Lakers. So soft.',
       likes: '23'
     },
     {
-      post: posts[1]._id,
+      post: post2._id,
       user: dray._id,
       date: '4/16/2022',
       text: 'Bron at 9???? Are you kidding? Where is steph?!??!? The old media.....',
       likes: '42'
     },
     {
-      post: posts[2]._id,
+      post: post3._id,
       user: jj._id,
       date: '7/22/2022',
       text: "You know, I don't hate this. If he can stay healthy AD and the Lakers are going to be scary. I just find it hard to believe that he will out produce Bron ",
       likes: '56'
     },
     {
-      post: posts[3]._id,
+      post: post4._id,
       user: perk._id,
       date: '7/25/2022',
       text: 'You are an absolute idiot',
       likes: '35'
     },
     {
-      post: posts[3]._id,
+      post: post4._id,
       user: kd._id,
       date: '7/25/2022',
       text: 'LEFRAUD AT 3?! ARE YOU KIDDING ME!!!! Now on Undisputed....',
       likes: '29'
     },
     {
-      post: posts[4]._id,
+      post: post5._id,
       user: bob._id,
       date: '5/19/2022',
       text: 'And we must have had the best firemen and plumbers on the planet at the time. And I was very proud to play with all of them.',
       likes: '57'
     },
     {
-      post: posts[4]._id,
+      post: post5._id,
       user: jerry._id,
       date: '7/22/2022',
       text: 'Tell me what your career looked like. What did he do that determined games? You averaged 12 points a game in the league.',
       likes: '62'
     },
     {
-      post: posts[4]._id,
+      post: post5._id,
       user: perk._id,
       date: '7/24/2022',
       text: 'Dang yall still mad about this? Bob dribbled with one hand!!!! JJ would smoke you guys. Carry the hell on...',
       likes: '88'
     },
     {
-      post: posts[5]._id,
+      post: post6._id,
       user: kd._id,
       date: '7/25/2022',
       text: 'I can’t tell you what the results would be, but I do know that steve kerr would’ve demanded that we put steve kerr in as many pick and rolls as possible',
       likes: '43'
     }
-    // {
-    //   post: posts[0]._id,
-    //   user: kd._id,
-    //   date: '6/30/2022',
-    //   text: '',
-    //   likes: ''
-    // },
   ]
 
   await Comment.insertMany(comments)
