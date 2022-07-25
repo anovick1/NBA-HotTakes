@@ -85,9 +85,9 @@ const main = async () => {
   // await skip.save()
   const post1 = await new Post({
     user: stephen._id,
-    name: stephen.name,
-    username: stephen.username,
-    pfp: stephen.pfp,
+    // name: stephen.name,
+    // username: stephen.username,
+    // pfp: stephen.pfp,
     title: 'Kyrie Franchise Destroyer',
     date: '6/30/2022',
     text: 'I feel that Kyrie Irving ruined the franchise,” Smith stated. “I feel that all of this is his doing. If Kyrie Irving had shown up to work, if he had been a more consistent presence, then he’d still be in Brooklyn. KD would still wanna be in Brooklyn. They probably might have won a championship, or at least would at least be knocking on the door again',
@@ -98,9 +98,9 @@ const main = async () => {
   await post1.save()
   const post2 = await new Post({
     user: skip._id,
-    name: skip.name,
-    username: skip.username,
-    pfp: skip.pfp,
+    // name: skip.name,
+    // username: skip.username,
+    // pfp: skip.pfp,
     title: 'Updated top 10',
     date: '4/15/2022',
     text: 'Here is my updated top 10 list. Now on Undisputed',
@@ -113,9 +113,9 @@ const main = async () => {
 
   const post3 = await new Post({
     user: perk._id,
-    name: perk.name,
-    pfp: perk.pfp,
-    username: perk.username,
+    // name: perk.name,
+    // pfp: perk.pfp,
+    // username: perk.username,
     title: '2023 MVP: AD',
     date: '7/22/2022',
     text: 'Carry the hell on...',
@@ -127,9 +127,9 @@ const main = async () => {
 
   const post4 = await new Post({
     user: nick._id,
-    name: nick.name,
-    username: nick.username,
-    pfp: nick.pfp,
+    // name: nick.name,
+    // username: nick.username,
+    // pfp: nick.pfp,
     title: 'Top 50 players in the last 50 years',
     date: '7/24/2022',
     text: 'Whats Wright? with Nick Wright',
@@ -141,9 +141,9 @@ const main = async () => {
   await post4.save()
   const post5 = await new Post({
     user: jj._id,
-    name: jj.name,
-    username: jj.username,
-    pfp: jj.pfp,
+    // name: jj.name,
+    // username: jj.username,
+    // pfp: jj.pfp,
     title: 'Plumbers and Firemen',
     date: '4/20/2022',
     text: "Back in those days, competition wasn’t anywhere near what it is in today’s NBA. NBA players weren’t even full-time athletes and during the offseason they’d have regular nine to five jobs. Cousy can't be compared to players who played before 1980 and how he never shot above 40% in his entire career. He was being guarded by plumbers and firemen ",
@@ -154,9 +154,9 @@ const main = async () => {
   await post5.save()
   const post6 = await new Post({
     user: dray._id,
-    name: dray.name,
-    username: dray.username,
-    pfp: dray.pfp,
+    // name: dray.name,
+    // username: dray.username,
+    // pfp: dray.pfp,
     title: '2017 Warriors vs 1996 Bulls',
     date: '7/2/2022',
     text: 'I’m watching the 98 Bulls vs Utah in the Finals… I can’t help but notice our 2017 team would’ve beaten these Bulls by a dub and these Jazz by 40 if they’re going to play these brands of basketball. And that’s why it’s dumb to compare Era’s. Learn to appreciate things for what they are. Analyze the game. And stop the unnecessary debating. Yours Truly, The New Media',
@@ -171,8 +171,8 @@ const main = async () => {
     {
       post: post1._id,
       user: kd._id,
-      username: kd.username,
-      pfp: kd.pfp,
+      // username: kd.username,
+      // pfp: kd.pfp,
       date: '6/30/2022',
       text: 'Facts and steph was way better.',
       likes: '4'
@@ -180,8 +180,8 @@ const main = async () => {
     {
       post: post1._id,
       user: skip._id,
-      username: skip.username,
-      pfp: skip.pfp,
+      // username: skip.username,
+      // pfp: skip.pfp,
       date: '6/30/2022',
       text: 'LeBron is crying for Kyrie to go to the Lakers. So soft.',
       likes: '23'
@@ -189,8 +189,8 @@ const main = async () => {
     {
       post: post2._id,
       user: dray._id,
-      username: dray.username,
-      pfp: dray.pfp,
+      // username: dray.username,
+      // pfp: dray.pfp,
       date: '4/16/2022',
       text: 'Bron at 9???? Are you kidding? Where is steph?!??!? The old media.....',
       likes: '42'
@@ -198,8 +198,8 @@ const main = async () => {
     {
       post: post3._id,
       user: jj._id,
-      username: jj.username,
-      pfp: jj.pfp,
+      // username: jj.username,
+      // pfp: jj.pfp,
       date: '7/22/2022',
       text: "You know, I don't hate this. If he can stay healthy AD and the Lakers are going to be scary. I just find it hard to believe that he will out produce Bron ",
       likes: '56'
@@ -207,8 +207,8 @@ const main = async () => {
     {
       post: post4._id,
       user: perk._id,
-      username: perk.username,
-      pfp: perk.pfp,
+      // username: perk.username,
+      // pfp: perk.pfp,
       date: '7/25/2022',
       text: 'You are an absolute idiot',
       likes: '35'
@@ -216,8 +216,8 @@ const main = async () => {
     {
       post: post4._id,
       user: kd._id,
-      username: kd.username,
-      pfp: kd.pfp,
+      // username: kd.username,
+      // pfp: kd.pfp,
       date: '7/25/2022',
       text: 'LEFRAUD AT 3?! ARE YOU KIDDING ME!!!! Now on Undisputed....',
       likes: '29'
@@ -225,8 +225,8 @@ const main = async () => {
     {
       post: post5._id,
       user: bob._id,
-      username: bob.username,
-      pfp: bob.pfp,
+      // username: bob.username,
+      // pfp: bob.pfp,
       date: '5/19/2022',
       text: 'And we must have had the best firemen and plumbers on the planet at the time. And I was very proud to play with all of them.',
       likes: '57'
@@ -234,8 +234,8 @@ const main = async () => {
     {
       post: post5._id,
       user: jerry._id,
-      username: jerry.username,
-      pfp: jerry.pfp,
+      // username: jerry.username,
+      // pfp: jerry.pfp,
       date: '7/22/2022',
       text: 'Tell me what your career looked like. What did he do that determined games? You averaged 12 points a game in the league.',
       likes: '62'
@@ -243,8 +243,8 @@ const main = async () => {
     {
       post: post5._id,
       user: perk._id,
-      username: perk.username,
-      pfp: perk.pfp,
+      // username: perk.username,
+      // pfp: perk.pfp,
       date: '7/24/2022',
       text: 'Dang yall still mad about this? Bob dribbled with one hand!!!! JJ would smoke you guys. Carry the hell on...',
       likes: '88'
@@ -252,8 +252,8 @@ const main = async () => {
     {
       post: post6._id,
       user: kd._id,
-      username: kd.username,
-      pfp: kd.pfp,
+      // username: kd.username,
+      // pfp: kd.pfp,
       date: '7/25/2022',
       text: 'I can’t tell you what the results would be, but I do know that steve kerr would’ve demanded that we put steve kerr in as many pick and rolls as possible',
       likes: '43'

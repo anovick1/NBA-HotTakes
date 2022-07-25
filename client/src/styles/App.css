@@ -60,3 +60,41 @@ h1 {
   border: 2px solid black;
   margin-top: 2vh;
 }
+.comment-pfp img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 1.5vh;
+  border: 1px solid black;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.comment-username {
+  font-weight: bold;
+  margin-top: 1.3vh;
+  margin-left: 0.5vw;
+}
+.comment-text {
+  width: 35vw;
+  margin-top: 1.3vh;
+  margin-left: 1vw;
+}
+
+.comment-likes {
+  margin-top: 2vh;
+}
+
+.likes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+.comment-pic-likes {
+}
