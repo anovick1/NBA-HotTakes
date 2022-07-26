@@ -3,7 +3,6 @@ import axios from 'axios'
 
 const Likes = (props) => {
   let post = props.post
-  console.log(post)
   let clicked = false
 
   const like = async (e) => {

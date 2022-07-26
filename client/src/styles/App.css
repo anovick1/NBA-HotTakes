@@ -194,3 +194,8 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+
+.bar-posts,
+.bar-comments {
+  cursor: pointer;
+}

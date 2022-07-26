@@ -2,8 +2,51 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import PostByUser from './PostByUser'
+import CommentsByUser from './CommentsByUser'
 
 const ProfileDetails = (props) => {
+  const [posts, setPosts] = useState(true)
+  const [comments, setComments] = useState(false)
+
+  const postClick = () => {
+    setPosts(true)
+    setComments(false)
+  }
+  const commentClick = () => {
+    setPosts(false)
+    setComments(true)
+  }
+
+  const displayFeed = () => {
+    if (posts) {
+      return (
+        <PostByUser
+          id={user._id}
+          users={props.users}
+          posts={props.posts}
+          comments={props.comments}
+          setPosts={props.setPosts}
+          setComments={props.setComments}
+          currentUser={props.currentUser}
+          setCurrentUser={props.setCurrentUser}
+        />
+      )
+    } else if (comments) {
+      return (
+        <CommentsByUser
+          id={user._id}
+          users={props.users}
+          posts={props.posts}
+          comments={props.comments}
+          setPosts={props.setPosts}
+          setComments={props.setComments}
+          currentUser={props.currentUser}
+          setCurrentUser={props.setCurrentUser}
+        />
+      )
+    }
+  }
+
   const [user, setUser] = useState('')
   let { username } = useParams()
   useEffect(() => {
@@ -22,23 +65,14 @@ const ProfileDetails = (props) => {
       </div>
       <div className="reviews">
         <div class="top-bar">
-          <div className="bar-posts">
+          <div className="bar-posts" onClick={() => postClick()}>
             <h1>Posts</h1>
           </div>
-          <div className="bar-comments">
+          <div className="bar-comments" onClick={() => commentClick()}>
             <h1>Comments</h1>
           </div>
         </div>
-        <PostByUser
-          id={user._id}
-          users={props.users}
-          posts={props.posts}
-          comments={props.comments}
-          setPosts={props.setPosts}
-          setComments={props.setComments}
-          currentUser={props.currentUser}
-          setCurrentUser={props.setCurrentUser}
-        />
+        {displayFeed()}
       </div>
     </div>
   ) : null
