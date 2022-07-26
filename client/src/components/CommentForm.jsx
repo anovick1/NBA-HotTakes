@@ -5,12 +5,9 @@ const CommentForm = (props) => {
   const [text, setText] = useState('')
   const [date, setDate] = useState('')
   const [likes, setLikes] = useState('')
-  // let l = props.users.length
-
+  console.log(props.currentUser)
   const addComment = async (e) => {
     e.preventDefault()
-    // props.setCurrentUser(props.users)
-    console.log(props.currentUser._id)
 
     await axios.post('http://localhost:3001/comments/' + props.postid, {
       post: props.postid,
@@ -19,6 +16,12 @@ const CommentForm = (props) => {
       text: text,
       likes: '0'
     })
+
+    const getComments = async () => {
+      const response = await axios.get('http://localhost:3001/comments')
+      props.setComments(response.data)
+    }
+    getComments()
   }
 
   const changeText = (event) => {
@@ -44,7 +47,7 @@ const CommentForm = (props) => {
         </div>
       </div>
       <div className="comment-form">
-        <form onClick={addComment}>
+        <form>
           <textarea
             type="text-area"
             value={text}
@@ -53,7 +56,7 @@ const CommentForm = (props) => {
             placeholder={'write comment here'}
             className="write"
           />
-          <button>Submit</button>
+          <button onClick={addComment}>Submit</button>
         </form>
       </div>
     </div>

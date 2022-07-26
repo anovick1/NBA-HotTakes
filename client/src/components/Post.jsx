@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import CommentForm from './CommentForm'
-
+let count = 0
 const Post = (props) => {
   let navigate = useNavigate()
 
@@ -45,7 +45,7 @@ const Post = (props) => {
               {props.comments
                 .filter((c) => c.post === post._id)
                 .map((comment) => (
-                  <div className="comment" key={comment.text}>
+                  <div className="comment" key={comment._id}>
                     {props.users
                       .filter((u) => u._id === comment.user)
                       .map((user) => (
@@ -57,7 +57,7 @@ const Post = (props) => {
                             onClick={() => showPost1(user.username)}
                             className="comment-username"
                           >
-                            {user.username}:
+                            {user.username} + {count}:
                           </div>
                         </div>
                       ))}
@@ -73,6 +73,8 @@ const Post = (props) => {
                   posts={props.posts}
                   users={props.users}
                   setCurrentUser={props.setCurrentUser}
+                  setComments={props.setComments}
+                  comments={props.comments}
                 />
               </div>
             </div>

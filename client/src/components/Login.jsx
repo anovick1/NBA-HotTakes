@@ -35,6 +35,9 @@ const Login = (props) => {
       bio: '',
       pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg'
     })
+    let update = props.users
+    update.push(props.currentUser)
+    props.setUsers(update)
   }
   return (
     <div className="form">
