@@ -37,6 +37,17 @@ app.get('/users/:id', async (req, res) => {
     res.send('User not found!')
   }
 })
+// get user by username
+app.get('/user/:username', async (req, res) => {
+  try {
+    const user = await User.find({ username: req.params.username })
+    if (!user) throw Error('User not found')
+    res.json(user)
+  } catch (e) {
+    console.log(e)
+    res.send('User not found!')
+  }
+})
 
 // create a post
 app.post('/user', async (req, res) => {

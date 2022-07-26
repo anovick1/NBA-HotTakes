@@ -5,11 +5,11 @@ import PostByUser from './PostByUser'
 
 const ProfileDetails = (props) => {
   const [user, setUser] = useState('')
-  let { id } = useParams()
+  let { username } = useParams()
   useEffect(() => {
-    let selectedProfile = props.users.find((user) => user._id === id)
+    let selectedProfile = props.users.find((user) => user.username === username)
     setUser(selectedProfile)
-  }, [props.users, id])
+  }, [props.users, username])
 
   return user ? (
     <div className="detail">
@@ -23,7 +23,7 @@ const ProfileDetails = (props) => {
       <div className="reviews">
         <h1>Posts</h1>
         <PostByUser
-          id={id}
+          id={user._id}
           users={props.users}
           posts={props.posts}
           comments={props.comments}

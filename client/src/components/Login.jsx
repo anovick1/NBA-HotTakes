@@ -26,9 +26,7 @@ const Login = (props) => {
       name: name,
       pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg'
     })
-    let l = parseInt(props.users.length) - 1
     props.setCurrentUser({
-      id: props.users[l]._id,
       username: username,
       name: name,
       pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg'

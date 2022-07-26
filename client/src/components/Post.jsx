@@ -5,10 +5,10 @@ const Post = (props) => {
   let navigate = useNavigate()
 
   const showPost = (user) => {
-    navigate(`${user._id}`)
+    navigate(`${user}`)
   }
-  const showPost1 = (user) => {
-    navigate(`/home/${user}`)
+  const showPost1 = (username) => {
+    navigate(`/home/${username}`)
   }
 
   return (
@@ -24,7 +24,10 @@ const Post = (props) => {
                     <img src={user.pfp} alt="pfp" />
                     <h2 className="post-name">{user.name}</h2>
                   </div>
-                  <h3 onClick={() => showPost(user)} className="post-username">
+                  <h3
+                    onClick={() => showPost(user.username)}
+                    className="post-username"
+                  >
                     @{user.username}
                   </h3>
                   <p className="post-date">{post.date}</p>
@@ -51,7 +54,7 @@ const Post = (props) => {
                             <img src={user.pfp} alt="commenter-pfp" />
                           </div>
                           <div
-                            onClick={() => showPost1(comment.user)}
+                            onClick={() => showPost1(user.username)}
                             className="comment-username"
                           >
                             {user.username}:

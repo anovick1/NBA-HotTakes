@@ -47,7 +47,7 @@ const PostByUser = (props) => {
                               <img src={user.pfp} alt="commenter-pfp" />
                             </div>
                             <div
-                              onClick={() => showPost(comment.user)}
+                              onClick={() => showPost(user.username)}
                               className="comment-username"
                             >
                               {user.username}:

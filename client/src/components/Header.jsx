@@ -11,7 +11,7 @@ const Header = (props) => {
           <Link to="/home">Home</Link>
         </div>
         <div>
-          <Link to={'/home/' + props.currentUser.id}>
+          <Link to={'/home/' + props.currentUser.username}>
             {props.currentUser.username}
           </Link>
         </div>

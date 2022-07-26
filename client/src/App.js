@@ -61,10 +61,12 @@ const App = () => {
                 <Header
                   currentUser={currentUser}
                   setCurrentUser={setCurrentUser}
+                  users={users}
                 />
                 <Home
                   users={users}
                   posts={posts}
+                  setUsers={setUsers}
                   comments={comments}
                   setPosts={setPosts}
                   setComments={setComments}
@@ -75,7 +77,7 @@ const App = () => {
             }
           />
           <Route
-            path="/home/:id"
+            path="/home/:username"
             element={
               <>
                 <Header
