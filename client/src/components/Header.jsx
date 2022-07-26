@@ -1,18 +1,25 @@
 import { Link } from 'react-router-dom'
 
 const Header = (props) => {
+  console.log(props.currentUser)
   return (
     <header>
       <nav>
-        <div>
+        <div className="logout-nav">
           <Link to="/">Logout</Link>
         </div>
-        <div>
+        <div className="home-nav">
           <Link to="/home">Home</Link>
         </div>
-        <div>
-          <Link to={'/home/' + props.currentUser.username}>
-            {props.currentUser.username}
+        <div className="user-nav">
+          <Link
+            to={'/home/' + props.currentUser.username}
+            className="user-profile"
+          >
+            <div id="pfp">
+              <img src={props.currentUser.pfp} alt="pfp" />
+            </div>
+            <div id="username">{props.currentUser.username}</div>
           </Link>
         </div>
       </nav>
