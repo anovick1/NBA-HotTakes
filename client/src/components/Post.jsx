@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import CommentForm from './CommentForm'
+import Likes from './Likes'
 const Post = (props) => {
   let navigate = useNavigate()
 
@@ -34,7 +35,6 @@ const Post = (props) => {
 
                   <h2 id="post-title">{post.title}</h2>
                   <div className="pic-likes">
-                    {/* <img src={post.image} alt="post-pic" /> */}
                     <iframe
                       src={post.video}
                       title="YouTube video player"
@@ -42,22 +42,7 @@ const Post = (props) => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen
                     ></iframe>
-                    <div className="likes">
-                      {/* <div className="post-like">👍 {post.likes}</div> */}
-                      {/* <div className="post-caption">
-                        <div className="pfp-username">
-                          <div className="comment-pfp">
-                            <img
-                              src={user.pfp}
-                              alt="commenter-pfp"
-                              onClick={() => showPost1(user.username)}
-                            />
-                          </div>
-                          <div>{post.text}</div>
-                        </div>
-                      </div> */}
-                      {/* <div className="post-dislike">👎 {post.dislikes}</div> */}
-                    </div>
+                    <div className="likes"></div>
                   </div>
                   <div className="post-caption">
                     <div className="pfp-username">
@@ -76,10 +61,15 @@ const Post = (props) => {
                       </div>
                     </div>
                     <div className="comment-text">{post.text}</div>
-                    <div className="likes">
-                      <div className="post-like">👍 {post.likes}</div>
-                      <div className="post-dislike">👎 {post.dislikes}</div>
-                    </div>
+                    {/* <div className="likes"> */}
+                    {/* <div className="post-like">👍 {post.likes}</div>
+                      <div className="post-dislike">👎 {post.dislikes}</div> */}
+                    <Likes
+                      post={post}
+                      comment={false}
+                      setPosts={props.setPosts}
+                    />
+                    {/* </div> */}
                   </div>
                 </div>
               ))}
@@ -106,7 +96,12 @@ const Post = (props) => {
                         </div>
                       ))}
                     <div className="comment-text">{comment.text}</div>
-                    <div className="comment-likes"> 👍{comment.likes}</div>
+                    {/* <div className="comment-likes"> 👍{comment.likes}</div> */}
+                    <Likes
+                      post={comment}
+                      comment={true}
+                      setComments={props.setComments}
+                    />
                   </div>
                 ))}
               <div>

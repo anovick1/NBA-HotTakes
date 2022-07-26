@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import CommentForm from './CommentForm'
+import Likes from './Likes'
 
 const PostByUser = (props) => {
   let navigate = useNavigate()
@@ -60,10 +61,11 @@ const PostByUser = (props) => {
                         </div>
                       </div>
                       <div className="comment-text">{post.text}</div>
-                      <div className="likes">
-                        <div className="post-like">👍 {post.likes}</div>
-                        <div className="post-dislike">👎 {post.dislikes}</div>
-                      </div>
+                      {/* <div className="likes"> */}
+                      {/* <div className="post-like">👍 {post.likes}</div>
+                      <div className="post-dislike">👎 {post.dislikes}</div> */}
+                      <Likes post={post} />
+                      {/* </div> */}
                     </div>
                   </div>
                 ))}
@@ -90,7 +92,11 @@ const PostByUser = (props) => {
                           </div>
                         ))}
                       <div className="comment-text">{comment.text}</div>
-                      <div className="comment-likes"> 👍{comment.likes}</div>
+                      <Likes
+                        post={comment}
+                        comment={true}
+                        setComments={props.setComments}
+                      />
                     </div>
                   ))}
                 <div>

@@ -21,7 +21,14 @@ const ProfileDetails = (props) => {
         <h3>{user.bio}</h3>
       </div>
       <div className="reviews">
-        <h1>Posts</h1>
+        <div class="top-bar">
+          <div className="bar-posts">
+            <h1>Posts</h1>
+          </div>
+          <div className="bar-comments">
+            <h1>Comments</h1>
+          </div>
+        </div>
         <PostByUser
           id={user._id}
           users={props.users}

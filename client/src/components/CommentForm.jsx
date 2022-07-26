@@ -3,9 +3,6 @@ import axios from 'axios'
 
 const CommentForm = (props) => {
   const [text, setText] = useState('')
-  const [date, setDate] = useState('')
-  const [likes, setLikes] = useState('')
-  // console.log(props.currentUser)
 
   const addComment = async (e) => {
     e.preventDefault()
@@ -30,10 +27,6 @@ const CommentForm = (props) => {
     let n = event.target.value
     setText(n)
   }
-  // const changeLikes = (event) => {
-  //   let n = event.target.value
-  //   setLikes(n)
-  // }
 
   return (
     <div className="comment-new">
