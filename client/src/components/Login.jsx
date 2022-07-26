@@ -22,13 +22,17 @@ const Login = (props) => {
   }
   const addUser = async (e) => {
     await axios.post('http://localhost:3001/user', {
+      id: '',
       username: username,
       name: name,
+      bio: '',
       pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg'
     })
     props.setCurrentUser({
+      id: '',
       username: username,
       name: name,
+      bio: '',
       pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg'
     })
   }

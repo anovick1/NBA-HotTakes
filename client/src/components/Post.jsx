@@ -11,7 +11,6 @@ const Post = (props) => {
   const showPost1 = (username) => {
     navigate(`/home/${username}`)
   }
-
   return (
     <div className="newsfeed">
       {props.posts.map((post) => (
@@ -71,6 +70,9 @@ const Post = (props) => {
                   postid={post._id}
                   currentUser={props.currentUser}
                   showPost1={showPost1}
+                  posts={props.posts}
+                  users={props.users}
+                  setCurrentUser={props.setCurrentUser}
                 />
               </div>
             </div>

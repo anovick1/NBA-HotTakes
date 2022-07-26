@@ -4,17 +4,11 @@ import Post from '../components/Post'
 import axios from 'axios'
 
 const Home = (props) => {
-  // useEffect(() => {
-  //   const getUsers = async () => {
-  //     const response = await axios.get('http://localhost:3001/users')
-  //     props.setUsers(response.data)
-  //   }
-  //   getUsers()
-  // }, [])
   let update = props.users
   update.push(props.currentUser)
   props.setUsers(update)
   let l = props.users.length - 1
+  props.setCurrentUser(update[l])
   return (
     <div>
       <h1>Newsfeed</h1>
@@ -24,7 +18,7 @@ const Home = (props) => {
         comments={props.comments}
         setPosts={props.setPosts}
         setComments={props.setComments}
-        currentUser={props.users[l]}
+        currentUser={props.users[l - 2]}
       />
     </div>
   )

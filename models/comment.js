@@ -7,7 +7,7 @@ const commentSchema = new Schema(
     user: { type: Schema.Types.ObjectId, ref: 'User' },
     // username: { type: String, ref: 'User' },
     // pfp: { type: String, ref: 'User' },
-    date: { type: String, required: true },
+    date: { type: String, required: false },
     text: { type: String, required: true },
     likes: { type: String, required: true }
   },
