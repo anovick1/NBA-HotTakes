@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Likes from './Likes'
+import Comment from './Comment'
 
 const CommentsByUser = (props) => {
   let navigate = useNavigate()
@@ -8,37 +9,28 @@ const CommentsByUser = (props) => {
   const showPost = (user) => {
     navigate(`/home/${user}`)
   }
-  return (
-    <div className="comments">
-      {props.comments
-        .filter((c) => c.user === props.id)
-        .map((comment) => (
-          <div className="comment" key={comment._id}>
-            {props.users
-              .filter((u) => u._id === comment.user)
-              .map((user) => (
-                <div className="pfp-username">
-                  <div className="comment-pfp">
-                    <img src={user.pfp} alt="commenter-pfp" />
-                  </div>
-                  <div
-                    onClick={() => showPost(user.username)}
-                    className="comment-username"
-                  >
-                    @{user.username}:
-                  </div>
-                </div>
-              ))}
-            <div className="comment-text">{comment.text}</div>
-            <Likes
-              post={comment}
-              comment={true}
-              setComments={props.setComments}
-            />
-          </div>
-        ))}
-    </div>
-  )
+
+  const displayComments = () => {
+    if (props.comments.filter((c) => c.user === props.id).length > 0) {
+      return (
+        <Comment
+          id={props.id}
+          users={props.users}
+          posts={props.posts}
+          comments={props.comments}
+          setPosts={props.setPosts}
+          setComments={props.setComments}
+          currentUser={props.currentUser}
+          setCurrentUser={props.setCurrentUser}
+          showPost={showPost}
+        />
+      )
+    } else {
+      return <h1>User has no comments</h1>
+    }
+  }
+  console.log(props.comments.filter((c) => c.user === props.id).length)
+  return <div>{displayComments()}</div>
 }
 
 export default CommentsByUser
