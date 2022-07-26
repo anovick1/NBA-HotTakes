@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import CommentForm from './CommentForm'
-import Likes from './Likes'
+import Likes from './sub-components/Likes'
 const Post = (props) => {
   let navigate = useNavigate()
 
@@ -61,15 +61,11 @@ const Post = (props) => {
                       </div>
                     </div>
                     <div className="comment-text">{post.text}</div>
-                    {/* <div className="likes"> */}
-                    {/* <div className="post-like">👍 {post.likes}</div>
-                      <div className="post-dislike">👎 {post.dislikes}</div> */}
                     <Likes
                       post={post}
                       comment={false}
                       setPosts={props.setPosts}
                     />
-                    {/* </div> */}
                   </div>
                 </div>
               ))}
@@ -96,7 +92,6 @@ const Post = (props) => {
                         </div>
                       ))}
                     <div className="comment-text">{comment.text}</div>
-                    {/* <div className="comment-likes"> 👍{comment.likes}</div> */}
                     <Likes
                       post={comment}
                       comment={true}

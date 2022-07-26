@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import Likes from './Likes'
-import Comment from './Comment'
+import Likes from './sub-components/Likes'
+import Comment from './sub-components/CommentUser'
 
 const CommentsByUser = (props) => {
   let navigate = useNavigate()
@@ -26,7 +26,11 @@ const CommentsByUser = (props) => {
         />
       )
     } else {
-      return <h1>User has no comments</h1>
+      return (
+        <div className="none">
+          <h1>User has no comments</h1>
+        </div>
+      )
     }
   }
   console.log(props.comments.filter((c) => c.user === props.id).length)

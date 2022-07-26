@@ -199,3 +199,7 @@ textarea {
 .bar-comments {
   cursor: pointer;
 }
+
+.none {
+  height: 50vh;
+}

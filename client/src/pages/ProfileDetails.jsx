@@ -1,8 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import PostByUser from './PostByUser'
-import CommentsByUser from './CommentsByUser'
+import PostByUser from '../components/PostByUser'
+import CommentsByUser from '../components/CommentsByUser'
 
 const ProfileDetails = (props) => {
   const [posts, setPosts] = useState(true)
