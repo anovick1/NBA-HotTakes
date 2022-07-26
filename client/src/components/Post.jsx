@@ -43,15 +43,21 @@ const Post = (props) => {
                 .filter((c) => c.post === post._id)
                 .map((comment) => (
                   <div className="comment" key={comment.text}>
-                    <div className="comment-pfp">
-                      <img src={comment.pfp} alt="commenter-pfp" />
-                    </div>
-                    <div
-                      onClick={() => showPost1(comment.user)}
-                      className="comment-username"
-                    >
-                      {comment.username}:{' '}
-                    </div>
+                    {props.users
+                      .filter((u) => u._id === comment.user)
+                      .map((user) => (
+                        <div className="pfp-username">
+                          <div className="comment-pfp">
+                            <img src={user.pfp} alt="commenter-pfp" />
+                          </div>
+                          <div
+                            onClick={() => showPost1(comment.user)}
+                            className="comment-username"
+                          >
+                            {user.username}:
+                          </div>
+                        </div>
+                      ))}
                     <div className="comment-text">{comment.text}</div>
                     <div className="comment-likes"> 👍{comment.likes}</div>
                   </div>

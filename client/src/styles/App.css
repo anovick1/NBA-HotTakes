@@ -1,3 +1,6 @@
+main {
+  background-image: url('https://media.istockphoto.com/photos/grunge-wood-pattern-texture-background-wooden-parquet-background-picture-id1186789565?k=20&m=1186789565&s=612x612&w=0&h=S6XRewqgEXj6RD6gMk1DYjG2AgmSI7xNsjCzKbvm4-8=');
+}
 nav {
   display: flex;
   justify-content: space-around;
@@ -20,6 +23,7 @@ h1 {
   margin: 2vh;
   padding-left: 2vw;
   padding-right: 2vw;
+  background-color: #bdeffc;
 }
 
 .post img {
@@ -77,21 +81,17 @@ h1 {
   border: 1px solid black;
   justify-content: space-around;
   padding: 5px;
+  background-color: #a1d5e3;
+  align-items: center;
 }
 
 .comment-username {
   font-weight: bold;
-  margin-top: 1.3vh;
   margin-left: 0.5vw;
 }
 .comment-text {
   width: 35vw;
-  margin-top: 1.3vh;
   margin-left: 1vw;
-}
-
-.comment-likes {
-  margin-top: 2vh;
 }
 
 .likes {
@@ -108,4 +108,9 @@ h1 {
   border: 2px solid black;
   width: 15vw;
   height: 25vh;
+}
+
+.pfp-username {
+  display: flex;
+  align-items: center;
 }
