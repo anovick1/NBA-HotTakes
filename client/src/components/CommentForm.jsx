@@ -22,6 +22,7 @@ const CommentForm = (props) => {
       props.setComments(response.data)
     }
     getComments()
+    setText('')
   }
 
   const changeText = (event) => {
