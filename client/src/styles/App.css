@@ -56,6 +56,10 @@ h1 {
   max-width: 50vw;
   max-height: 50vh;
 }
+iframe {
+  width: 50vw;
+  height: 50vh;
+}
 
 .post-info {
   display: flex;
@@ -101,7 +105,8 @@ h1 {
   border: 2px solid black;
 }
 
-.comment {
+.comment,
+.post-caption {
   display: flex;
   margin-bottom: 1.5vh;
   border: 1px solid black;
@@ -109,6 +114,7 @@ h1 {
   padding: 5px;
   background-color: #e6b581;
   align-items: center;
+  max-width: 50vw;
 }
 
 .comment-username {
@@ -153,4 +159,16 @@ h1 {
 
 textarea {
   width: 30vw;
+}
+
+#post-title {
+  text-align: center;
+}
+
+/* .post-caption {
+  justify-content: space-between;
+} */
+
+.post-like {
+  margin-right: 1vw;
 }

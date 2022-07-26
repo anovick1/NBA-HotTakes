@@ -14,6 +14,7 @@ const Post = (props) => {
     <div className="newsfeed">
       {props.posts.map((post) => (
         <div key={post.title}>
+          {/* each post */}
           <div className="post">
             {props.users
               .filter((u) => u._id === post.user)
@@ -30,16 +31,60 @@ const Post = (props) => {
                     @{user.username}
                   </h3>
                   <p className="post-date">{post.date}</p>
+
+                  <h2 id="post-title">{post.title}</h2>
+                  <div className="pic-likes">
+                    {/* <img src={post.image} alt="post-pic" /> */}
+                    <iframe
+                      src={post.video}
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                    <div className="likes">
+                      {/* <div className="post-like">👍 {post.likes}</div> */}
+                      {/* <div className="post-caption">
+                        <div className="pfp-username">
+                          <div className="comment-pfp">
+                            <img
+                              src={user.pfp}
+                              alt="commenter-pfp"
+                              onClick={() => showPost1(user.username)}
+                            />
+                          </div>
+                          <div>{post.text}</div>
+                        </div>
+                      </div> */}
+                      {/* <div className="post-dislike">👎 {post.dislikes}</div> */}
+                    </div>
+                  </div>
+                  <div className="post-caption">
+                    <div className="pfp-username">
+                      <div className="comment-pfp">
+                        <img
+                          src={user.pfp}
+                          alt="commenter-pfp"
+                          onClick={() => showPost1(user.username)}
+                        />
+                      </div>
+                      <div
+                        onClick={() => showPost1(user.username)}
+                        className="comment-username"
+                      >
+                        @{user.username}:
+                      </div>
+                    </div>
+                    <div className="comment-text">{post.text}</div>
+                    <div className="likes">
+                      <div className="post-like">👍 {post.likes}</div>
+                      <div className="post-dislike">👎 {post.dislikes}</div>
+                    </div>
+                  </div>
                 </div>
               ))}
-            <h2>{post.title}</h2>
-            <div className="comment-pic-likes">
-              <img src={post.image} alt="post-pic" />
-              <div className="likes">
-                <div className="post-like">👍 {post.likes}</div>
-                <div className="post-dislike">👎 {post.dislikes}</div>
-              </div>
-            </div>
+            {/* comment section */}
+            <h3>Comments</h3>
             <div className="comments">
               {props.comments
                 .filter((c) => c.post === post._id)
@@ -56,7 +101,7 @@ const Post = (props) => {
                             onClick={() => showPost1(user.username)}
                             className="comment-username"
                           >
-                            {user.username}:
+                            @{user.username}:
                           </div>
                         </div>
                       ))}

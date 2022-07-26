@@ -5,7 +5,8 @@ const CommentForm = (props) => {
   const [text, setText] = useState('')
   const [date, setDate] = useState('')
   const [likes, setLikes] = useState('')
-  console.log(props.currentUser)
+  // console.log(props.currentUser)
+
   const addComment = async (e) => {
     e.preventDefault()
 
@@ -44,7 +45,7 @@ const CommentForm = (props) => {
           onClick={() => props.showPost1(props.currentUser.username)}
           className="comment-username"
         >
-          {props.currentUser.username}:
+          @{props.currentUser.username}:
         </div>
       </div>
       <form>

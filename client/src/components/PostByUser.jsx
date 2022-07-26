@@ -29,7 +29,14 @@ const PostByUser = (props) => {
                 ))}
               <h2>{post.title}</h2>
               <div className="comment-pic-likes">
-                <img src={post.image} alt="post-pic" />
+                {/* <img src={post.image} alt="post-pic" /> */}
+                <iframe
+                  src={post.video}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
                 <div className="likes">
                   <div className="post-like">👍 {post.likes}</div>
                   <div className="post-dislike">👎 {post.dislikes}</div>
@@ -51,7 +58,7 @@ const PostByUser = (props) => {
                               onClick={() => showPost(user.username)}
                               className="comment-username"
                             >
-                              {user.username}:
+                              @{user.username}:
                             </div>
                           </div>
                         ))}

@@ -90,8 +90,9 @@ const main = async () => {
     // pfp: stephen.pfp,
     title: 'Kyrie Franchise Destroyer',
     date: '6/30/2022',
-    text: 'I feel that Kyrie Irving ruined the franchise,” Smith stated. “I feel that all of this is his doing. If Kyrie Irving had shown up to work, if he had been a more consistent presence, then he’d still be in Brooklyn. KD would still wanna be in Brooklyn. They probably might have won a championship, or at least would at least be knocking on the door again',
+    text: 'Prove me wrong',
     image: 'https://i.ytimg.com/vi/FJXOPH5qPcU/maxresdefault.jpg',
+    video: 'https://www.youtube.com/embed/FJXOPH5qPcU',
     likes: '40',
     dislikes: '25'
   })
@@ -103,9 +104,10 @@ const main = async () => {
     // pfp: skip.pfp,
     title: 'Updated top 10',
     date: '4/15/2022',
-    text: 'Here is my updated top 10 list. Now on Undisputed',
+    text: 'Here is my updated top 10 list. No shot LeBum can climb higher than 9. Steph not top 10.',
     image:
       'https://pbs.twimg.com/media/FYeIsmWXEAE_kvv?format=jpg&name=900x900',
+    video: 'https://www.youtube.com/embed/2gqoRRKd19g',
     likes: '17',
     dislikes: '63'
   })
@@ -120,6 +122,7 @@ const main = async () => {
     date: '7/22/2022',
     text: 'Carry the hell on...',
     image: 'https://i.ytimg.com/vi/-jf_eH0azTQ/maxresdefault.jpg',
+    video: 'https://www.youtube.com/embed/-jf_eH0azTQ',
     likes: '27',
     dislikes: '65'
   })
@@ -132,9 +135,10 @@ const main = async () => {
     // pfp: nick.pfp,
     title: 'Top 50 players in the last 50 years',
     date: '7/24/2022',
-    text: 'Whats Wright? with Nick Wright',
+    text: 'I am wright',
     image:
       'https://pbs.twimg.com/media/FWwXuatWIAIwtc2?format=jpg&name=900x900',
+    video: 'https://www.youtube.com/embed/aQ_ryDmS5Jw',
     likes: '3',
     dislikes: '105'
   })
@@ -146,8 +150,9 @@ const main = async () => {
     // pfp: jj.pfp,
     title: 'Plumbers and Firemen',
     date: '4/20/2022',
-    text: "Back in those days, competition wasn’t anywhere near what it is in today’s NBA. NBA players weren’t even full-time athletes and during the offseason they’d have regular nine to five jobs. Cousy can't be compared to players who played before 1980 and how he never shot above 40% in his entire career. He was being guarded by plumbers and firemen ",
+    text: 'I would cook Bob Cousy in 1v1',
     image: 'https://brobible.com/wp-content/uploads/2022/04/jjredick.jpg?w=640',
+    video: 'https://www.youtube.com/embed/H2DzEv5aUEg',
     likes: '116',
     dislikes: '62'
   })
@@ -159,9 +164,10 @@ const main = async () => {
     // pfp: dray.pfp,
     title: '2017 Warriors vs 1996 Bulls',
     date: '7/2/2022',
-    text: 'I’m watching the 98 Bulls vs Utah in the Finals… I can’t help but notice our 2017 team would’ve beaten these Bulls by a dub and these Jazz by 40 if they’re going to play these brands of basketball. And that’s why it’s dumb to compare Era’s. Learn to appreciate things for what they are. Analyze the game. And stop the unnecessary debating. Yours Truly, The New Media',
+    text: 'I can’t help but notice our 2017 team would’ve beaten these Bulls by a dub and these Jazz by 40 if they’re going to play these brands of basketball. ',
     image:
       'https://www.nbcsports.com/sites/rsnunited/files/archive/assets_media_gallery/chicago/2020/04/15/bullsdubs_landscape_chi.jpg',
+    video: 'https://www.youtube.com/embed/bjeg8Sfm0rI',
     likes: '82',
     dislikes: '66'
   })
