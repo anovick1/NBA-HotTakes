@@ -14,6 +14,7 @@ const Home = (props) => {
   let update = props.users
   update.push(props.currentUser)
   props.setUsers(update)
+  let l = props.users.length - 1
   return (
     <div>
       <h1>Newsfeed</h1>
@@ -23,6 +24,7 @@ const Home = (props) => {
         comments={props.comments}
         setPosts={props.setPosts}
         setComments={props.setComments}
+        currentUser={props.users[l]}
       />
     </div>
   )

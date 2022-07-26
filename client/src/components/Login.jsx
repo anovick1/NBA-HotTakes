@@ -31,8 +31,6 @@ const Login = (props) => {
       name: name,
       pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg'
     })
-    setName('')
-    setUsername('')
   }
   return (
     <div className="form">

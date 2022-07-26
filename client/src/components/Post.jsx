@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import CommentForm from './CommentForm'
 
 const Post = (props) => {
   let navigate = useNavigate()
@@ -65,6 +66,13 @@ const Post = (props) => {
                     <div className="comment-likes"> 👍{comment.likes}</div>
                   </div>
                 ))}
+              <div>
+                <CommentForm
+                  postid={post._id}
+                  currentUser={props.currentUser}
+                  showPost1={showPost1}
+                />
+              </div>
             </div>
           </div>
         </div>
