@@ -54,7 +54,7 @@ const CommentForm = (props) => {
             value={text}
             onChange={changeText}
             name={'text'}
-            placeholder={'write comment here'}
+            placeholder={'leave a comment...'}
             className="write"
           />
         </div>
