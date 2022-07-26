@@ -47,8 +47,8 @@ const CommentForm = (props) => {
           {props.currentUser.username}:
         </div>
       </div>
-      <div className="comment-form">
-        <form>
+      <form>
+        <div className="comment-form">
           <textarea
             type="text-area"
             value={text}
@@ -57,8 +57,10 @@ const CommentForm = (props) => {
             placeholder={'write comment here'}
             className="write"
           />
-          <button onClick={addComment}>Submit</button>
-        </form>
+        </div>
+      </form>
+      <div className="comment-btn">
+        <button onClick={addComment}>Submit</button>
       </div>
     </div>
   )

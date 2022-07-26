@@ -119,8 +119,12 @@ h1 {
   display: flex;
   margin-bottom: 1.5vh;
   border: 1px solid black;
-  justify-content: flex-start;
+  justify-content: space-around;
   padding: 5px;
   background-color: lightgrey;
   align-items: center;
+}
+
+textarea {
+  width: 35vw;
 }
