@@ -29,32 +29,35 @@ const CommentForm = (props) => {
   }
 
   return (
-    <div className="comment-new">
-      <div className="pfp-username">
-        <div className="comment-pfp">
-          <img src={props.currentUser.pfp} alt="commenter-pfp" />
+    <div className="comment-dislike">
+      <div className="fake">❌</div>
+      <div className="comment-new">
+        <div className="pfp-username">
+          <div className="comment-pfp">
+            <img src={props.currentUser.pfp} alt="commenter-pfp" />
+          </div>
+          <div
+            onClick={() => props.showPost1(props.currentUser.username)}
+            className="comment-username"
+          >
+            @{props.currentUser.username}:
+          </div>
         </div>
-        <div
-          onClick={() => props.showPost1(props.currentUser.username)}
-          className="comment-username"
-        >
-          @{props.currentUser.username}:
+        <form>
+          <div className="comment-form">
+            <textarea
+              type="text-area"
+              value={text}
+              onChange={changeText}
+              name={'text'}
+              placeholder={'leave a comment...'}
+              className="write"
+            />
+          </div>
+        </form>
+        <div className="comment-btn">
+          <button onClick={addComment}>Submit</button>
         </div>
-      </div>
-      <form>
-        <div className="comment-form">
-          <textarea
-            type="text-area"
-            value={text}
-            onChange={changeText}
-            name={'text'}
-            placeholder={'leave a comment...'}
-            className="write"
-          />
-        </div>
-      </form>
-      <div className="comment-btn">
-        <button onClick={addComment}>Submit</button>
       </div>
     </div>
   )

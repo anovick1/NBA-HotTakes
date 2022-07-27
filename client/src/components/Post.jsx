@@ -34,40 +34,45 @@ const Post = (props) => {
                     @{user.username}
                   </h3>
                   <p className="post-date">{post.date}</p>
-
                   <h2 id="post-title">{post.title}</h2>
-                  <div className="pic-likes">
-                    <iframe
-                      src={post.video}
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                    <div className="likes"></div>
-                  </div>
-                  <div className="post-caption">
-                    <div className="pfp-username">
-                      <div className="comment-pfp">
-                        <img
-                          src={user.pfp}
-                          alt="commenter-pfp"
-                          onClick={() => showPost1(user.username)}
+                  <div className="post-pic-caption">
+                    <div className="pic-likes">
+                      <iframe
+                        src={post.video}
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
+                      <div className="likes"></div>
+                    </div>
+                    <div className="post-pic-likes">
+                      <div className="fake">❌</div>
+                      <div className="post-caption">
+                        <div className="pfp-username">
+                          <div className="comment-pfp">
+                            <img
+                              src={user.pfp}
+                              alt="commenter-pfp"
+                              onClick={() => showPost1(user.username)}
+                            />
+                          </div>
+                          <div
+                            onClick={() => showPost1(user.username)}
+                            className="comment-username"
+                          >
+                            @{user.username}:
+                          </div>
+                        </div>
+                        <div className="comment-text">{post.text}</div>
+                        <Likes
+                          post={post}
+                          comment={false}
+                          setPosts={props.setPosts}
                         />
                       </div>
-                      <div
-                        onClick={() => showPost1(user.username)}
-                        className="comment-username"
-                      >
-                        @{user.username}:
-                      </div>
+                      <div className="fake-right">❌</div>
                     </div>
-                    <div className="comment-text">{post.text}</div>
-                    <Likes
-                      post={post}
-                      comment={false}
-                      setPosts={props.setPosts}
-                    />
                   </div>
                 </div>
               ))}

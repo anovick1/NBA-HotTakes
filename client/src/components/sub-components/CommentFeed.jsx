@@ -1,12 +1,15 @@
 import React from 'react'
 import Likes from './Likes'
 import CommentForm from '../CommentForm'
+import axios from 'axios'
 
 const Comment = (props) => {
   // console.log(props.currentUser)
-  const checkCurrentUser = (user) => {
-    if (user === props.currentUser._id) {
+  const checkCurrentUser = (comment) => {
+    if (comment.user === props.currentUser._id) {
       return <div className="delete-comment">❌</div>
+    } else {
+      return <div className="fake">❌</div>
     }
   }
   return (
@@ -14,30 +17,33 @@ const Comment = (props) => {
       {props.comments
         .filter((c) => c.post === props.id)
         .map((comment) => (
-          <div className="comment" key={comment._id}>
-            {props.users
-              .filter((u) => u._id === comment.user)
-              .map((user) => (
-                <div className="pfp-username">
-                  <div className="comment-pfp">
-                    <img src={user.pfp} alt="commenter-pfp" />
+          <div className="comment-dislike" key={comment._id}>
+            <div className="fake">❌</div>
+            <div className="comment">
+              {props.users
+                .filter((u) => u._id === comment.user)
+                .map((user) => (
+                  <div className="pfp-username">
+                    <div className="comment-pfp">
+                      <img src={user.pfp} alt="commenter-pfp" />
+                    </div>
+                    <div
+                      onClick={() => props.showPost(user.username)}
+                      className="comment-username"
+                    >
+                      @{user.username}:
+                    </div>
                   </div>
-                  <div
-                    onClick={() => props.showPost(user.username)}
-                    className="comment-username"
-                  >
-                    @{user.username}:
-                  </div>
-                </div>
-              ))}
-            <div className="comment-text">{comment.text}</div>
-            <Likes
-              post={comment}
-              comment={true}
-              setComments={props.setComments}
-              currentUser={props.currentUser._id}
-            />
-            {checkCurrentUser(comment.user)}
+                ))}
+              <div className="comment-text">{comment.text}</div>
+              <Likes
+                post={comment}
+                comment={true}
+                setComments={props.setComments}
+                currentUser={props.currentUser._id}
+              />
+            </div>
+            {checkCurrentUser(comment)}
           </div>
         ))}
       <div>
