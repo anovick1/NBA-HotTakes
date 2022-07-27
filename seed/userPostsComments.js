@@ -16,7 +16,7 @@ const getTweets = async (id) => {
       }
     }
   )
-  return response.data
+  return response.data.data
 }
 
 const main = async () => {

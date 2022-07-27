@@ -3,7 +3,6 @@ import Likes from './Likes'
 import Comment from './CommentFeed'
 
 const Post = (props) => {
-  console.log(props.currentUser)
   return (
     <div className="newsfeed">
       {props.posts
@@ -24,7 +23,9 @@ const Post = (props) => {
                       onClick={() => props.showPost(user.username)}
                       className="post-username"
                     >
-                      @{user.username}
+                      <h4>
+                        @<span>{user.username}</span>
+                      </h4>
                     </h3>
                     <p className="post-date">{post.date}</p>
 
@@ -33,9 +34,9 @@ const Post = (props) => {
                       <iframe
                         src={post.video}
                         title="YouTube video player"
-                        frameborder="0"
+                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
+                        allowFullscreen="true"
                       ></iframe>
                       <div className="likes"></div>
                     </div>
@@ -52,7 +53,9 @@ const Post = (props) => {
                           onClick={() => props.showPost(user.username)}
                           className="comment-username"
                         >
-                          @{user.username}:
+                          <h4>
+                            @<span>{user.username}</span>
+                          </h4>
                         </div>
                       </div>
                       <div className="comment-text">{post.text}</div>

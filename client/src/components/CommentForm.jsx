@@ -40,7 +40,9 @@ const CommentForm = (props) => {
             onClick={() => props.showPost1(props.currentUser.username)}
             className="comment-username"
           >
-            @{props.currentUser.username}:
+            <h4>
+              @<span>{props.currentUser.username}</span>
+            </h4>
           </div>
         </div>
         <form>
