@@ -3,7 +3,7 @@ import Likes from './Likes'
 
 const Comment = (props) => {
   return (
-    <div className="comments">
+    <div className="comments-user">
       {props.comments
         .filter((c) => c.user === props.id)
         .map((comment) => (

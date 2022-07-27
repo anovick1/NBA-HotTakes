@@ -32,6 +32,7 @@ const PostByUser = (props) => {
       )
     }
   }
+
   return <div>{displayPosts()}</div>
 }
 

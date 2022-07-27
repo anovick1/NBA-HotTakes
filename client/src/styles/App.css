@@ -86,6 +86,12 @@ iframe {
 .post-username,
 .comment-username {
   cursor: pointer;
+  text-decoration: underline;
+}
+.post-username:hover,
+.comment-username:hover {
+  cursor: pointer;
+  color: white;
 }
 .pfp-name {
   display: flex;
@@ -163,10 +169,6 @@ textarea {
   text-align: center;
 }
 
-/* .post-caption {
-  justify-content: space-between;
-} */
-
 .post-like {
   margin-right: 1vw;
 }
@@ -201,5 +203,8 @@ textarea {
 }
 
 .none {
-  height: 50vh;
+  min-height: 50vh;
+}
+.comments-user {
+  min-height: 50vh;
 }
