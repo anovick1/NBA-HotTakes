@@ -17,12 +17,10 @@ const App = () => {
     name: '',
     pfp: ''
   })
-
   useEffect(() => {
     const getUsers = async () => {
       const response = await axios.get('http://localhost:3001/users')
       setUsers(response.data)
-      setCurrentUser(response.data[response.data.length - 1])
     }
     getUsers()
   }, [currentUser])
@@ -41,7 +39,7 @@ const App = () => {
     getComments()
   }, [])
 
-  console.log(currentUser)
+  // console.log(users)
   return (
     <div>
       <main>
