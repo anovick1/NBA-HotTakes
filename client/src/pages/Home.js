@@ -4,9 +4,12 @@ import Post from '../components/Post'
 import axios from 'axios'
 
 const Home = (props) => {
+  let n = props.users.length
+
   useEffect(() => {
     props.setCurrentUser(props.users[props.users.length - 1])
-  })
+  }, [n])
+
   console.log(props.currentUser)
   return (
     <div>
