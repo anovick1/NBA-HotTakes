@@ -6,8 +6,10 @@ const userSchema = new Schema(
     username: { type: String, required: true },
     name: { type: String, required: true },
     bio: { type: String, required: false },
-    pfp: { type: String, required: false },
-    twitterUrl: { type: String, required: false }
+    pfp: { type: String, required: true },
+    twitterUrl: { type: String, required: false },
+    twitterid: { type: String, required: false },
+    tweets: { type: Object, required: false }
   },
   { timestamps: true }
 )
