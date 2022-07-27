@@ -1,11 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import CommentForm from './CommentForm'
 import Likes from './sub-components/Likes'
 import Comment from './sub-components/CommentFeed'
 
 const Post = (props) => {
   let navigate = useNavigate()
+  // console.log(props.currentUser)
 
   const showPost = (user) => {
     navigate(`${user}`)
@@ -82,7 +82,7 @@ const Post = (props) => {
               setComments={props.setComments}
               currentUser={props.currentUser}
               setCurrentUser={props.setCurrentUser}
-              showPost={showPost}
+              showPost={showPost1}
             />
           </div>
         </div>

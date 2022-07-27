@@ -14,7 +14,7 @@ const Home = (props) => {
         comments={props.comments}
         setPosts={props.setPosts}
         setComments={props.setComments}
-        currentUser={props.users[l]}
+        currentUser={props.currentUser}
       />
     </div>
   )

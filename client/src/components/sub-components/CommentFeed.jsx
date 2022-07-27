@@ -3,7 +3,12 @@ import Likes from './Likes'
 import CommentForm from '../CommentForm'
 
 const Comment = (props) => {
-  console.log(props.id)
+  // console.log(props.currentUser)
+  const checkCurrentUser = (user) => {
+    if (user === props.currentUser._id) {
+      return <div className="delete-comment">❌</div>
+    }
+  }
   return (
     <div className="comments">
       {props.comments
@@ -30,7 +35,9 @@ const Comment = (props) => {
               post={comment}
               comment={true}
               setComments={props.setComments}
+              currentUser={props.currentUser._id}
             />
+            {checkCurrentUser(comment.user)}
           </div>
         ))}
       <div>

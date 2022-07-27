@@ -22,6 +22,7 @@ const App = () => {
     const getUsers = async () => {
       const response = await axios.get('http://localhost:3001/users')
       setUsers(response.data)
+      setCurrentUser(response.data[response.data.length - 1])
     }
     getUsers()
   }, [currentUser])
@@ -40,6 +41,7 @@ const App = () => {
     getComments()
   }, [])
 
+  console.log(currentUser)
   return (
     <div>
       <main>
@@ -51,6 +53,7 @@ const App = () => {
                 currentUser={currentUser}
                 setCurrentUser={setCurrentUser}
                 users={users}
+                setUsers={setUsers}
               />
             }
           />

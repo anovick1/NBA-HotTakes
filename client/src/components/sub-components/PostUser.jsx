@@ -3,6 +3,7 @@ import Likes from './Likes'
 import Comment from './CommentFeed'
 
 const Post = (props) => {
+  console.log(props.currentUser)
   return (
     <div className="newsfeed">
       {props.posts

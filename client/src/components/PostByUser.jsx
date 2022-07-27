@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Post from './sub-components/PostUser'
 
 const PostByUser = (props) => {
+  console.log(props.currentUser)
   let navigate = useNavigate()
 
   const showPost = (user) => {
