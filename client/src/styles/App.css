@@ -1,3 +1,4 @@
+html,
 main {
   background-image: url('https://media.istockphoto.com/photos/grunge-wood-pattern-texture-background-wooden-parquet-background-picture-id1186789565?k=20&m=1186789565&s=612x612&w=0&h=S6XRewqgEXj6RD6gMk1DYjG2AgmSI7xNsjCzKbvm4-8=');
 }
@@ -8,7 +9,9 @@ nav {
   padding-right: 0.25vw;
   width: 98vw;
   align-items: center;
-  background-color: #e6b581;
+  /* background-color: #e6b581; */
+  background-color: rgba(255, 255, 255, 0.501);
+
   border: 1px solid black;
 }
 
@@ -49,7 +52,9 @@ h1 {
   margin: 2vh;
   padding-left: 2vw;
   padding-right: 2vw;
-  background-color: #f0be89;
+  /* background-color: #f0be89; */
+  /* background-color: rgba(255, 255, 255, 0.384); */
+  background-color: rgba(230, 181, 129, 0.502);
 }
 
 .post img {
@@ -118,7 +123,10 @@ iframe {
   border: 1px solid black;
   justify-content: space-around;
   padding: 5px;
-  background-color: #e6b581;
+  /* background-color: #e6b581; */
+  background-color: rgba(255, 255, 255, 0.501);
+  background-color: rgba(230, 181, 129, 0.502);
+
   align-items: center;
   width: 50vw;
 }
@@ -165,7 +173,9 @@ iframe {
   border: 1px solid black;
   justify-content: space-around;
   padding: 5px;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
+  background-color: rgba(255, 255, 255, 0.501);
+
   align-items: center;
   width: 50vw;
 }
@@ -217,11 +227,6 @@ textarea {
 .comments-user {
   min-height: 50vh;
 }
-/* 
-.like-delete {
-  display: flex;
-  width: ;
-} */
 
 .delete-comment {
   margin-left: 1vw;
@@ -246,4 +251,62 @@ textarea {
 .fake-right {
   margin-left: 1vw;
   color: transparent;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome {
+  text-align: center;
+  border: 2px solid black;
+  background-color: rgba(230, 181, 129, 0.502);
+  padding-right: 2vh;
+  padding-left: 2vh;
+}
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.501);
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.input-box {
+  border-radius: 10px;
+  margin: 5vh;
+  padding: 2vh;
+  width: 25vw;
+  background-color: rgba(255, 255, 255, 0.761);
+}
+#form-submit {
+  width: 28vw;
+  padding: 1vh;
+  border-radius: 10px;
+  margin-bottom: 7vh;
+  background-color: rgba(255, 255, 255, 0.761);
+}
+
+#username-input {
+  margin-top: 1vh;
+  margin-bottom: 4vh;
+}
+#name-input {
+  margin-bottom: 0vh;
 }

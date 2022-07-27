@@ -40,28 +40,40 @@ const Login = (props) => {
     props.setUsers(update)
   }
   return (
-    <div className="form">
-      <h1>Please enter the info to enter</h1>
-      <div className="input-div">
-        <form onSubmit={handleSubmit}>
-          <div className="name-town-date">
-            <input
-              type="text"
-              value={username}
-              onChange={changeUsername}
-              name={'Username'}
-              placeholder={'Username'}
-            />
-            <input
-              type="text"
-              value={name}
-              onChange={changeName}
-              name={'name'}
-              placeholder={'name'}
-            />
-            <button id="form-submit">Submit</button>
-          </div>
-        </form>
+    <div className="login-page">
+      {/* <div className="welcome">
+        <h1>Welcome to NBA Hot Takes</h1>
+        <p>A social media dedicated to NBA hot takes!</p>
+      </div> */}
+      <div className="form">
+        {/* <h2>Please enter the info to enter</h2> */}
+        <h1>Welcome to NBA Hot Takes</h1>
+        <p>A social media dedicated to NBA hot takes!</p>
+        <div className="input-div">
+          <form onSubmit={handleSubmit}>
+            <div className="login-form">
+              <input
+                type="text"
+                value={name}
+                onChange={changeName}
+                name={'name'}
+                placeholder={'Name'}
+                className="input-box"
+                id="name-input"
+              />
+              <input
+                type="text"
+                value={username}
+                onChange={changeUsername}
+                name={'Username'}
+                placeholder={'Username'}
+                className="input-box"
+                id="username-input"
+              />
+              <button id="form-submit">Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   )
