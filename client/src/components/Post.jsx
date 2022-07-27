@@ -77,7 +77,7 @@ const Post = (props) => {
                 </div>
               ))}
             {/* comment section */}
-            <h3>Comments</h3>
+            <h3>Comments:</h3>
             <Comment
               id={post._id}
               users={props.users}

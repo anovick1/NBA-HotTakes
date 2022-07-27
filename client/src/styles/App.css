@@ -98,6 +98,12 @@ iframe {
   cursor: pointer;
   color: white;
 }
+#comment-username {
+  text-decoration: underline;
+}
+span {
+  text-decoration: underline;
+}
 .pfp-name {
   display: flex;
 }
@@ -175,13 +181,16 @@ iframe {
   padding: 5px;
   /* background-color: lightgrey; */
   background-color: rgba(255, 255, 255, 0.501);
-
   align-items: center;
   width: 50vw;
 }
 
 textarea {
   width: 30vw;
+  background-color: rgba(255, 255, 255, 0.501);
+}
+textarea:focus {
+  background-color: white;
 }
 
 #post-title {
@@ -231,6 +240,9 @@ textarea {
 .delete-comment {
   margin-left: 1vw;
   cursor: pointer;
+}
+.delete-comment:hover {
+  border: 1px dotted black;
 }
 
 .comments {
@@ -309,4 +321,7 @@ textarea {
 }
 #name-input {
   margin-bottom: 0vh;
+}
+button {
+  cursor: pointer;
 }
