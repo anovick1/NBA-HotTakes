@@ -31,7 +31,9 @@ const Post = (props) => {
                     onClick={() => showPost(user.username)}
                     className="post-username"
                   >
-                    @{user.username}
+                    <h4>
+                      @<span>{user.username}</span>
+                    </h4>
                   </h3>
                   <p className="post-date">{post.date}</p>
                   <h2 id="post-title">{post.title}</h2>
@@ -61,7 +63,9 @@ const Post = (props) => {
                             onClick={() => showPost1(user.username)}
                             className="comment-username"
                           >
-                            @{user.username}:
+                            <h4>
+                              @<span>{user.username}</span>
+                            </h4>
                           </div>
                         </div>
                         <div className="comment-text">{post.text}</div>

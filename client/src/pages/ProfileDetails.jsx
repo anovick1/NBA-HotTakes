@@ -130,18 +130,7 @@ const ProfileDetails = (props) => {
         </a>
         <h3>{user.bio}</h3>
       </div>
-      <div className="reviews">
-        {/* <div class="top-bar">
-          <div className="bar-posts" onClick={() => postClick()}>
-            <h1>Posts</h1>
-          </div>
-          <div className="bar-comments" onClick={() => commentClick()}>
-            <h1>Comments</h1>
-          </div>
-          <div className="bar-tweets" onClick={() => commentClick()}>
-            <h1>Tweets</h1>
-          </div>
-        </div> */}
+      <div className="content">
         {displayBar()}
         {displayFeed()}
       </div>

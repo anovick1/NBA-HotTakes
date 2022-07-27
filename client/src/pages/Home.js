@@ -11,8 +11,10 @@ const Home = (props) => {
   }, [n])
 
   return (
-    <div>
-      <h1>Newsfeed</h1>
+    <div className="home">
+      <div className="home-title">
+        <h1>Newsfeed</h1>
+      </div>
       <Post
         users={props.users}
         posts={props.posts}
