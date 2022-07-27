@@ -4,14 +4,28 @@ import CommentForm from '../CommentForm'
 import axios from 'axios'
 
 const Comment = (props) => {
-  // console.log(props.currentUser)
+  const deleteComment = async (comment) => {
+    await axios.delete('http://localhost:3001/comment/' + comment._id, {})
+
+    const getComments = async () => {
+      const response = await axios.get('http://localhost:3001/comments')
+      props.setComments(response.data)
+    }
+    getComments()
+  }
+
   const checkCurrentUser = (comment) => {
     if (comment.user === props.currentUser._id) {
-      return <div className="delete-comment">❌</div>
+      return (
+        <div className="delete-comment" onClick={() => deleteComment(comment)}>
+          ❌
+        </div>
+      )
     } else {
       return <div className="fake">❌</div>
     }
   }
+
   return (
     <div className="comments">
       {props.comments

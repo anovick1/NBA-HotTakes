@@ -225,6 +225,7 @@ textarea {
 
 .delete-comment {
   margin-left: 1vw;
+  cursor: pointer;
 }
 
 .comments {
