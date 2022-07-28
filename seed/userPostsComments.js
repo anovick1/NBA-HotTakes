@@ -25,6 +25,9 @@ const getTweets = async (id) => {
 }
 
 const main = async () => {
+  User.collection.drop()
+  Post.collection.drop()
+  Comment.collection.drop()
   const stephen = await new User({
     username: 'stephenasmith',
     name: 'Stephen A Smith',
@@ -258,7 +261,6 @@ const main = async () => {
 }
 
 const run = async () => {
-  db.dropDatabase()
   await main()
   db.close()
 }
