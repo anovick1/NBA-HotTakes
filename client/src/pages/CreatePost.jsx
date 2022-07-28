@@ -63,8 +63,11 @@ const CreatePost = (props) => {
         <ol>
           <li>find the video you want to post</li>
           <li>Click on the share button </li>
+          <img
+            src="https://github.com/anovick1/NBA-HotTakes/blob/main/images/youtube-share.png?raw=true"
+            alt="share"
+          />
           <li></li>
-          <img src="images/youtube-share.png" alt="share" />
         </ol>
       </div>
       <div className="form">
