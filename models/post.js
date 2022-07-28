@@ -7,10 +7,9 @@ const postSchema = new Schema(
     title: { type: String, required: true },
     date: { type: String, required: true },
     text: { type: String, required: true },
-    image: { type: String, required: true },
+    image: { type: String, required: false },
     video: { type: String, required: true },
-    likes: { type: String, required: true },
-    dislikes: { type: String, required: true }
+    likes: { type: String, required: true }
   },
   { timestamps: true }
 )

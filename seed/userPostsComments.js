@@ -116,8 +116,7 @@ const main = async () => {
     image:
       'https://pbs.twimg.com/media/FWwXuatWIAIwtc2?format=jpg&name=900x900',
     video: 'https://www.youtube.com/embed/aQ_ryDmS5Jw',
-    likes: '3',
-    dislikes: '105'
+    likes: '-33'
   })
   await post1.save()
 
@@ -128,8 +127,7 @@ const main = async () => {
     text: 'Carry the hell on...',
     image: 'https://i.ytimg.com/vi/-jf_eH0azTQ/maxresdefault.jpg',
     video: 'https://www.youtube.com/embed/-jf_eH0azTQ',
-    likes: '27',
-    dislikes: '65'
+    likes: '27'
   })
   await post2.save()
 
@@ -140,8 +138,7 @@ const main = async () => {
     text: 'I would cook Bob Cousy in 1v1',
     image: 'https://brobible.com/wp-content/uploads/2022/04/jjredick.jpg?w=640',
     video: 'https://www.youtube.com/embed/H2DzEv5aUEg',
-    likes: '116',
-    dislikes: '62'
+    likes: '116'
   })
   await post3.save()
   const post4 = await new Post({
@@ -151,8 +148,7 @@ const main = async () => {
     text: 'Prove me wrong',
     image: 'https://i.ytimg.com/vi/FJXOPH5qPcU/maxresdefault.jpg',
     video: 'https://www.youtube.com/embed/FJXOPH5qPcU',
-    likes: '40',
-    dislikes: '25'
+    likes: '40'
   })
   await post4.save()
   const post5 = await new Post({
@@ -176,7 +172,7 @@ const main = async () => {
       'https://pbs.twimg.com/media/FYeIsmWXEAE_kvv?format=jpg&name=900x900',
     video: 'https://www.youtube.com/embed/2gqoRRKd19g',
     likes: '17',
-    dislikes: '63'
+    dislikes: '-63'
   })
   await post6.save()
 

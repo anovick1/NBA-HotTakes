@@ -318,7 +318,8 @@ textarea:focus {
   border: 2px solid black;
   border-radius: 10px;
 }
-.input-box {
+.input-box,
+.create-caption {
   border-radius: 10px;
   margin: 5vh;
   padding: 2vh;
@@ -490,13 +491,18 @@ h2 {
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.user-nav-dropdown:hover .dropbtn,
+/* .user-nav-dropdown:hover .dropbtn,
 .logout-nav:hover,
 .home-nav:hover {
   background-color: rgba(230, 181, 129, 0.502);
-}
+} */
 
 .logout-nav,
 .home-nav {
   padding: 0 1vw 0;
+}
+
+.create-caption,
+.input-box {
+  border: 2px solid black;
 }

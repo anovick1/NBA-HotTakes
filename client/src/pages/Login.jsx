@@ -43,12 +43,7 @@ const Login = (props) => {
   }
   return (
     <div className="login-page">
-      {/* <div className="welcome">
-        <h1>Welcome to NBA Hot Takes</h1>
-        <p>A social media dedicated to NBA hot takes!</p>
-      </div> */}
       <div className="form">
-        {/* <h2>Please enter the info to enter</h2> */}
         <h1>Welcome to NBA Hot Takes</h1>
         <p>A social media dedicated to NBA hot takes!</p>
         <div className="input-div">

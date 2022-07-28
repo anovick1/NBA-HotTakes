@@ -97,7 +97,7 @@ app.get('/user/posts/:id', async (req, res) => {
 })
 
 // create a post
-app.post('/posts/:id', async (req, res) => {
+app.post('/post', async (req, res) => {
   try {
     const post = await new Post(req.body)
     await post.save()

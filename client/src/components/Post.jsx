@@ -5,7 +5,6 @@ import Comment from './sub-components/CommentFeed'
 
 const Post = (props) => {
   let navigate = useNavigate()
-  // console.log(props.currentUser)
 
   const showPost = (user) => {
     navigate(`${user}`)

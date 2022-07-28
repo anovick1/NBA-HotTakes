@@ -21,7 +21,7 @@ const Header = (props) => {
             </div>
             <div id="username">
               <h2>
-                @<span>{props.currentUser.username}</span>
+                @<span id="nav">{props.currentUser.username}</span>
               </h2>
             </div>
           </button>
@@ -30,13 +30,10 @@ const Header = (props) => {
               to={'/home/' + props.currentUser.username}
               className="user-profile"
             >
-              <h4>View profile</h4>
+              <h4>View Profile</h4>
             </Link>
-            <Link
-              to={'/home/' + props.currentUser.username}
-              className="user-profile"
-            >
-              <h4>Make post</h4>
+            <Link to={'/create-post'} className="user-profile">
+              <h4>Make Post</h4>
             </Link>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login.jsx'
 import ProfileDetails from './pages/ProfileDetails'
+import CreatePost from './pages/CreatePost'
 import axios from 'axios'
 import Header from './components/Header'
 
@@ -77,6 +78,25 @@ const App = () => {
               </>
             }
           />
+
+          <Route
+            path="/create-post"
+            element={
+              <>
+                <Header
+                  currentUser={currentUser}
+                  setCurrentUser={setCurrentUser}
+                  users={users}
+                />
+                <CreatePost
+                  currentUser={currentUser}
+                  posts={posts}
+                  setPosts={setPosts}
+                />
+              </>
+            }
+          />
+
           <Route
             path="/home/:username"
             element={
