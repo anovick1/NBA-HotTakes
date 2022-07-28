@@ -109,42 +109,6 @@ const main = async () => {
   await bob.save()
 
   const post1 = await new Post({
-    user: stephen._id,
-    title: 'Kyrie Franchise Destroyer',
-    date: '6/30/2022',
-    text: 'Prove me wrong',
-    image: 'https://i.ytimg.com/vi/FJXOPH5qPcU/maxresdefault.jpg',
-    video: 'https://www.youtube.com/embed/FJXOPH5qPcU',
-    likes: '40',
-    dislikes: '25'
-  })
-  await post1.save()
-  const post2 = await new Post({
-    user: skip._id,
-    title: 'Updated top 10',
-    date: '4/15/2022',
-    text: 'Here is my updated top 10 list. No shot LeBum can climb higher than 9. Steph not top 10.',
-    image:
-      'https://pbs.twimg.com/media/FYeIsmWXEAE_kvv?format=jpg&name=900x900',
-    video: 'https://www.youtube.com/embed/2gqoRRKd19g',
-    likes: '17',
-    dislikes: '63'
-  })
-  await post2.save()
-
-  const post3 = await new Post({
-    user: perk._id,
-    title: '2023 MVP: AD',
-    date: '7/22/2022',
-    text: 'Carry the hell on...',
-    image: 'https://i.ytimg.com/vi/-jf_eH0azTQ/maxresdefault.jpg',
-    video: 'https://www.youtube.com/embed/-jf_eH0azTQ',
-    likes: '27',
-    dislikes: '65'
-  })
-  await post3.save()
-
-  const post4 = await new Post({
     user: nick._id,
     title: 'Top 50 players in the last 50 years',
     date: '7/24/2022',
@@ -155,8 +119,21 @@ const main = async () => {
     likes: '3',
     dislikes: '105'
   })
-  await post4.save()
-  const post5 = await new Post({
+  await post1.save()
+
+  const post2 = await new Post({
+    user: perk._id,
+    title: '2023 MVP: AD',
+    date: '7/22/2022',
+    text: 'Carry the hell on...',
+    image: 'https://i.ytimg.com/vi/-jf_eH0azTQ/maxresdefault.jpg',
+    video: 'https://www.youtube.com/embed/-jf_eH0azTQ',
+    likes: '27',
+    dislikes: '65'
+  })
+  await post2.save()
+
+  const post3 = await new Post({
     user: jj._id,
     title: 'Plumbers and Firemen',
     date: '4/20/2022',
@@ -166,8 +143,19 @@ const main = async () => {
     likes: '116',
     dislikes: '62'
   })
-  await post5.save()
-  const post6 = await new Post({
+  await post3.save()
+  const post4 = await new Post({
+    user: stephen._id,
+    title: 'Kyrie Franchise Destroyer',
+    date: '6/30/2022',
+    text: 'Prove me wrong',
+    image: 'https://i.ytimg.com/vi/FJXOPH5qPcU/maxresdefault.jpg',
+    video: 'https://www.youtube.com/embed/FJXOPH5qPcU',
+    likes: '40',
+    dislikes: '25'
+  })
+  await post4.save()
+  const post5 = await new Post({
     user: dray._id,
     title: '2017 Warriors vs 1996 Bulls',
     date: '7/2/2022',
@@ -177,6 +165,18 @@ const main = async () => {
     video: 'https://www.youtube.com/embed/bjeg8Sfm0rI',
     likes: '82',
     dislikes: '66'
+  })
+  await post5.save()
+  const post6 = await new Post({
+    user: skip._id,
+    title: 'Updated top 10',
+    date: '4/15/2022',
+    text: 'Here is my updated top 10 list. No shot LeBum can climb higher than 9. Steph not top 10.',
+    image:
+      'https://pbs.twimg.com/media/FYeIsmWXEAE_kvv?format=jpg&name=900x900',
+    video: 'https://www.youtube.com/embed/2gqoRRKd19g',
+    likes: '17',
+    dislikes: '63'
   })
   await post6.save()
 
