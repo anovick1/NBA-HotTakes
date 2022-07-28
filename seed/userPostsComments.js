@@ -12,8 +12,6 @@ const getTweets = async (id) => {
       '/tweets?max_results=5&exclude=retweets,replies',
     {
       headers: {
-        // Authorization:
-        //   'Bearer AAAAAAAAAAAAAAAAAAAAAJcsfQEAAAAAH%2Fi49Xk7IUQWoXD90jdunqKPQPE%3DHPC32TJ4pXgPmH4XtAQvzaUiaj1UbBYG9ie5RiaC78xZMnp1hd'
         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
       }
     }
@@ -256,7 +254,6 @@ const main = async () => {
 
 const run = async () => {
   db.dropDatabase()
-  // await getTweets()
   await main()
   db.close()
 }
