@@ -44,19 +44,19 @@ Once you fork and clone the repo:
 
 #### _Deployed Login Page_
 
-![Image](Images/loginpage.png)
+![Image](images/loginpage.png)
 
 #### _Deployed Homepage_
 
-![Image](Images/newsfeed.png)
+![Image](images/newsfeed.png)
 
 #### _Deployed Profile page_
 
-![Image](Images/profile.png)
+![Image](images/profile.png)
 
 #### _Deployed Profile page_
 
-![Image](Images/create.png)
+![Image](images/create.png)
 
 ---
 
