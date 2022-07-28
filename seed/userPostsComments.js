@@ -6,17 +6,22 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 var axios = require('axios')
 
 const getTweets = async (id) => {
-  const response = await axios.get(
-    'https://api.twitter.com/2/users/' +
-      id +
-      '/tweets?max_results=5&exclude=retweets,replies',
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.BEARER_TOKEN}`
+  try {
+    const response = await axios.get(
+      'https://api.twitter.com/2/users/' +
+        id +
+        '/tweets?max_results=5&exclude=retweets,replies',
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.BEARER_TOKEN}`
+        }
       }
-    }
-  )
-  return response.data.data
+    )
+    return response.data.data
+  } catch (error) {
+    console.log(error.response)
+    return error.response
+  }
 }
 
 const main = async () => {
