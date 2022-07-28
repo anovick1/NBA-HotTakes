@@ -27,7 +27,7 @@ const ProfileDetails = (props) => {
   const displayBar = () => {
     if (posts) {
       return (
-        <div class="top-bar">
+        <div className="top-bar">
           <div className="bar-selected" onClick={() => postClick()}>
             <h1>Posts</h1>
           </div>
@@ -42,7 +42,7 @@ const ProfileDetails = (props) => {
     }
     if (comments) {
       return (
-        <div class="top-bar">
+        <div className="top-bar">
           <div className="bar-unselected" onClick={() => postClick()}>
             <h1>Posts</h1>
           </div>
@@ -57,7 +57,7 @@ const ProfileDetails = (props) => {
     }
     if (tweets) {
       return (
-        <div class="top-bar">
+        <div className="top-bar">
           <div className="bar-unselected" onClick={() => postClick()}>
             <h1>Posts</h1>
           </div>

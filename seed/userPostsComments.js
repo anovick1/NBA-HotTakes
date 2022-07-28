@@ -95,24 +95,19 @@ const main = async () => {
     username: 'TheLogo',
     name: 'Jerry West',
     bio: 'Jerome Alan West, commonly known as Jerry West, is an American basketball executive and former player. He played professionally for the Los Angeles Lakers of the National Basketball Association.',
-    pfp: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaex8wDY6Td5rFdg58DaNS_6TGM3Hf6O5cDb_S_mDAmO-v0fwz'
+    pfp: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaex8wDY6Td5rFdg58DaNS_6TGM3Hf6O5cDb_S_mDAmO-v0fwz',
+    tweets: []
   })
   await jerry.save()
   const bob = await new User({
     username: 'BobCousy',
     name: 'Bob Cousy',
     bio: 'I had 29 assists in a game',
-    pfp: 'https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_34/2979876/190821-bob-cousy-cs-1156a.jpg'
+    pfp: 'https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_34/2979876/190821-bob-cousy-cs-1156a.jpg',
+    tweets: []
   })
   await bob.save()
-  // const skip = await new User({
-  //   username: '',
-  //   name: '',
-  //   bio: '',
-  //   pfp: '',
-  //   twitterUrl: ''
-  // })
-  // await skip.save()
+
   const post1 = await new Post({
     user: stephen._id,
     title: 'Kyrie Franchise Destroyer',

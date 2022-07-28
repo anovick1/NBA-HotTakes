@@ -15,7 +15,8 @@ const App = () => {
     id: '',
     username: '',
     name: '',
-    pfp: ''
+    pfp: '',
+    tweets: []
   })
   useEffect(() => {
     const getUsers = async () => {
@@ -39,7 +40,6 @@ const App = () => {
     getComments()
   }, [])
 
-  // console.log(users)
   return (
     <div>
       <main>

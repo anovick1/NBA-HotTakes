@@ -29,7 +29,7 @@ const Comment = (props) => {
       {props.comments
         .filter((c) => c.user === props.id)
         .map((comment) => (
-          <div className="comment-dislike" key={comment._id}>
+          <div className="comment-dislike" key={comment.text}>
             <div className="fake">❌</div>
             <div className="comment">
               {props.users

@@ -435,3 +435,8 @@ a:hover {
 a:active {
   color: rgb(69, 69, 237);
 }
+
+.tweet-username,
+p {
+  margin: 0;
+}

@@ -23,9 +23,7 @@ const Post = (props) => {
                       onClick={() => props.showPost(user.username)}
                       className="post-username"
                     >
-                      <h4>
-                        @<span>{user.username}</span>
-                      </h4>
+                      @<span>{user.username}</span>
                     </h3>
                     <p className="post-date">{post.date}</p>
 

@@ -26,14 +26,16 @@ const Login = (props) => {
       username: username,
       name: name,
       bio: '',
-      pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg'
+      pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg',
+      tweets: []
     })
     props.setCurrentUser({
       id: '',
       username: username,
       name: name,
       bio: '',
-      pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg'
+      pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg',
+      tweets: []
     })
     let update = props.users
     update.push(props.currentUser)

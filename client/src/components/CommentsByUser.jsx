@@ -33,7 +33,6 @@ const CommentsByUser = (props) => {
       )
     }
   }
-  console.log(props.comments.filter((c) => c.user === props.id).length)
   return <div>{displayComments()}</div>
 }
 

@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 const Tweets = (props) => {
   let tweets = props.users.filter((u) => u._id === props.id)[0].tweets
   let user = props.users.filter((u) => u._id === props.id)[0]
-  console.log(user)
 
   const displayTweets = () => {
     if (tweets.length > 0) {
@@ -22,9 +21,9 @@ const Tweets = (props) => {
                       <h3>{user.name}</h3>
                     </div>
                     <div className="tweet-username">
-                      <p3>
+                      <p>
                         @<span>{user.username}</span>
-                      </p3>
+                      </p>
                     </div>
                   </div>
                 </div>

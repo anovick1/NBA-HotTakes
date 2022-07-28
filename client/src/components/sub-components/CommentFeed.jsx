@@ -31,13 +31,13 @@ const Comment = (props) => {
       {props.comments
         .filter((c) => c.post === props.id)
         .map((comment) => (
-          <div className="comment-dislike" key={comment._id}>
+          <div className="comment-dislike" key={comment.text}>
             <div className="fake">❌</div>
             <div className="comment">
               {props.users
                 .filter((u) => u._id === comment.user)
                 .map((user) => (
-                  <div className="pfp-username">
+                  <div className="pfp-username" key={user.username}>
                     <div className="comment-pfp">
                       <img src={user.pfp} alt="commenter-pfp" />
                     </div>
@@ -45,9 +45,9 @@ const Comment = (props) => {
                       onClick={() => props.showPost(user.username)}
                       className="comment-username"
                     >
-                      <h4>
+                      <h3>
                         @<span>{user.username}</span>
-                      </h4>
+                      </h3>
                     </div>
                   </div>
                 ))}
