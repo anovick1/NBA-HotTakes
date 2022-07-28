@@ -7,16 +7,7 @@ const CreatePost = (props) => {
 
   const [title, setTitle] = useState('')
   const [text, setText] = useState('')
-  // const [image, setImage] = useState('')
   const [video, setVideo] = useState('')
-  const [newPost, setNewPost] = useState({
-    user: props.currentUser._id,
-    title: title,
-    date: props.currentUser.createdAt,
-    text: text,
-    video: video,
-    likes: '0'
-  })
 
   const changeTitle = (event) => {
     let n = event.target.value
@@ -26,15 +17,12 @@ const CreatePost = (props) => {
     let n = event.target.value
     setText(n)
   }
-  // const changeImage = (event) => {
-  //   let n = event.target.value
-  //   setImage(n)
-  // }
+
   const changeVideo = (event) => {
     let n = event.target.value
     setVideo(n)
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     addPost(e)
     navigate(`/home`)
   }
@@ -47,7 +35,7 @@ const CreatePost = (props) => {
       video: video,
       likes: '0'
     })
-    setNewPost({
+    props.setNewPost({
       user: props.currentUser._id,
       title: title,
       date: props.currentUser.createdAt,
@@ -56,10 +44,9 @@ const CreatePost = (props) => {
       likes: ''
     })
     let update = props.posts
-    update.push(newPost)
+    update.push(props.newPost)
     props.setPosts(update)
   }
-  console.log(props.posts)
   return (
     <div className="login-page">
       <div className="form">
@@ -82,7 +69,7 @@ const CreatePost = (props) => {
                 value={video}
                 onChange={changeVideo}
                 name={'video'}
-                placeholder={'Past youtube video link'}
+                placeholder={'Paste youtube video link'}
                 className="input-box"
                 id="name-input"
               />

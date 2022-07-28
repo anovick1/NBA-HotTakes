@@ -19,6 +19,14 @@ const App = () => {
     pfp: '',
     tweets: []
   })
+  const [newPost, setNewPost] = useState({
+    user: '',
+    title: '',
+    date: '',
+    text: '',
+    video: '',
+    likes: ''
+  })
   useEffect(() => {
     const getUsers = async () => {
       const response = await axios.get('http://localhost:3001/users')
@@ -26,6 +34,13 @@ const App = () => {
     }
     getUsers()
   }, [currentUser])
+  useEffect(() => {
+    const getPosts = async () => {
+      const response = await axios.get('http://localhost:3001/posts')
+      setPosts(response.data)
+    }
+    getPosts()
+  }, [newPost])
   useEffect(() => {
     const getPosts = async () => {
       const response = await axios.get('http://localhost:3001/posts')
@@ -92,6 +107,8 @@ const App = () => {
                   currentUser={currentUser}
                   posts={posts}
                   setPosts={setPosts}
+                  newPost={newPost}
+                  setNewPost={setNewPost}
                 />
               </>
             }
