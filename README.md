@@ -54,7 +54,7 @@ Once you fork and clone the repo:
 
 ### _Technologies Used_
 
-<img src="https://www.thinksys.com/assets/images/MERN-logo.png"  width="700">
+<img style="center" src="https://www.thinksys.com/assets/images/MERN-logo.png"  width="700">
 
 - React.js
 - MongoDB
