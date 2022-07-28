@@ -12,7 +12,7 @@
 
 ---
 
-![Image](https://static.vecteezy.com/system/resources/previews/001/188/689/non_2x/basketball-on-fire-png.png)
+<img src="https://static.vecteezy.com/system/resources/previews/001/188/689/non_2x/basketball-on-fire-png.png"  height="350">
 
 ---
 
@@ -46,10 +46,7 @@ Once you fork and clone the repo:
 
 <div style= "center">
     <pre>
-        <img src="images/loginpage.png"  height="250">&nbsp;
-        <img src="images/newsfeed.png" height="250">&nbsp;
-        <img src="images/profile.png" height="250">&nbsp;
-        <img src="images/create.png" height="250">
+        <img src="images/loginpage.png"  height="250">&nbsp;&nbsp;&nbsp;<img src="images/newsfeed.png" height="250">&nbsp;&nbsp;&nbsp;<img src="images/profile.png" height="250">&nbsp;&nbsp;&nbsp;<img src="images/create.png" height="250">
     </pre>
 </div>
 
@@ -57,7 +54,7 @@ Once you fork and clone the repo:
 
 ### _Technologies Used_
 
-![Image](https://codingthesmartway.com/wp-content/uploads/2019/01/mern_logo.png)
+<img src="https://www.thinksys.com/assets/images/MERN-logo.png"  width="800">
 
 - React.js
 - MongoDB
