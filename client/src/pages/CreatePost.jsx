@@ -26,11 +26,16 @@ const CreatePost = (props) => {
     addPost(e)
     navigate(`/home`)
   }
+  const current = new Date()
+  const date = `${
+    current.getMonth() + 1
+  }/${current.getDate()}/${current.getFullYear()}`
+
   const addPost = async (e) => {
     await axios.post('http://localhost:3001/post', {
       user: props.currentUser._id,
       title: title,
-      date: props.currentUser.createdAt,
+      date: date,
       text: text,
       video: video,
       likes: '0'
@@ -38,7 +43,7 @@ const CreatePost = (props) => {
     props.setNewPost({
       user: props.currentUser._id,
       title: title,
-      date: props.currentUser.createdAt,
+      date: date,
       text: text,
       video: video,
       likes: ''
