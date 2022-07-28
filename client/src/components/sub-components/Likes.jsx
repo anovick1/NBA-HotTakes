@@ -4,11 +4,11 @@ import axios from 'axios'
 const Likes = (props) => {
   let post = props.post
   let clicked = false
-
   const like = async (e) => {
     let likes = parseInt(post.likes) + 1
 
     if (props.comment === false) {
+      console.log('test')
       await axios.put('http://localhost:3001/post/' + post._id, {
         likes: likes
       })

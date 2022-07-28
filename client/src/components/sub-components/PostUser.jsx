@@ -57,7 +57,7 @@ const Post = (props) => {
                         </div>
                       </div>
                       <div className="comment-text">{post.text}</div>
-                      <Likes post={post} />
+                      <Likes post={post} comment={false} />
                     </div>
                   </div>
                 ))}
