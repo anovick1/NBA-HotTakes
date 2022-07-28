@@ -9,7 +9,7 @@ const userSchema = new Schema(
     pfp: { type: String, required: true },
     twitterUrl: { type: String, required: false },
     twitterid: { type: String, required: false },
-    tweets: { type: Object, required: true }
+    tweets: { type: Array, required: true }
   },
   { timestamps: true }
 )
