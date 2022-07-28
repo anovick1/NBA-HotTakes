@@ -89,6 +89,4 @@ Once you fork and clone the repo:
 
 #### **_Resources_**
 
-- Twitter v2 api
-- Heroku
-- Postman
+##### [Trello Link](https://trello.com/b/yFObpZ1y/project-2)
