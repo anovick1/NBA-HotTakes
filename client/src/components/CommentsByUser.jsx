@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import Likes from './sub-components/Likes'
 import Comment from './sub-components/CommentUser'
 
 const CommentsByUser = (props) => {
