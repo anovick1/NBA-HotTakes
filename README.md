@@ -46,7 +46,7 @@ Once you fork and clone the repo:
 
 <div style= "center">
     <pre>
-        <img src="images/loginpage.png"  height="300">&nbsp;&nbsp;&nbsp;<img src="images/newsfeed.png" height="300">&nbsp;&nbsp;&nbsp;<img src="images/profile.png" height="300">&nbsp;&nbsp;&nbsp;<img src="images/create.png" height="300">
+        <img src="images/loginpage.png"  height="350">&nbsp;&nbsp;&nbsp;<img src="images/newsfeed.png" height="350">&nbsp;&nbsp;&nbsp;<img src="images/profile.png" height="350">&nbsp;&nbsp;&nbsp;<img src="images/create.png" height="350">
     </pre>
 </div>
 
@@ -54,7 +54,7 @@ Once you fork and clone the repo:
 
 ### _Technologies Used_
 
-<img src="https://www.thinksys.com/assets/images/MERN-logo.png"  width="800">
+<img src="https://www.thinksys.com/assets/images/MERN-logo.png"  width="700">
 
 - React.js
 - MongoDB
