@@ -238,7 +238,7 @@ const main = async () => {
       post: post5._id,
       user: jerry._id,
       date: '7/22/2022',
-      text: 'Tell me what your career looked like. What did he do that determined games? You averaged 12 points a game in the league.',
+      text: 'Tell me what your career looked like. What did you do that determined games? You averaged 12 points a game in the league.',
       likes: '62'
     },
     {
