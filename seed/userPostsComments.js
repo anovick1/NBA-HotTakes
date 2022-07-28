@@ -1,5 +1,6 @@
 const db = require('../db')
 const { User, Post, Comment } = require('../models')
+require('dotenv').config()
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 var axios = require('axios')
@@ -11,8 +12,9 @@ const getTweets = async (id) => {
       '/tweets?max_results=5&exclude=retweets,replies',
     {
       headers: {
-        Authorization:
-          'Bearer AAAAAAAAAAAAAAAAAAAAAJcsfQEAAAAAH%2Fi49Xk7IUQWoXD90jdunqKPQPE%3DHPC32TJ4pXgPmH4XtAQvzaUiaj1UbBYG9ie5RiaC78xZMnp1hd'
+        // Authorization:
+        //   'Bearer AAAAAAAAAAAAAAAAAAAAAJcsfQEAAAAAH%2Fi49Xk7IUQWoXD90jdunqKPQPE%3DHPC32TJ4pXgPmH4XtAQvzaUiaj1UbBYG9ie5RiaC78xZMnp1hd'
+        Authorization: `Bearer ${process.env.BEARER_TOKEN}`
       }
     }
   )
