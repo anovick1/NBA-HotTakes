@@ -44,12 +44,12 @@ Once you fork and clone the repo:
 
 ### Screenshots
 
-<div style="width:850px;height:120px;line-height:3em;overflow:auto">
+<div style="width:850px;height:278px;line-height:3em;overflow:auto">
     <div  style="width: 2000px; height: 90px;">
-        <img src="images/loginpage.png" width="160" height="90"> 
-        <img src="images/newsfeed.png" width="160" height="90"> 
-        <img src="images/profile.png" width="160" height="90">  
-       <img src="images/create.png" width="160" height="90">
+        <img src="images/loginpage.png" width="500" height="278"> 
+        <img src="images/newsfeed.png" width="500" height="278px"> 
+        <img src="images/profile.png" width="500" height="278px">  
+       <img src="images/create.png" width="500" height="278px">
     </div>
 </div>
 
