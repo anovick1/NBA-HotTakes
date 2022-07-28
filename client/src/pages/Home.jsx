@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 // import { Route, Routes } from 'react-router-dom'
-import Post from '../components/Post'
+import Newsfeed from '../components/Newsfeed'
 import axios from 'axios'
 
 const Home = (props) => {
@@ -15,7 +15,7 @@ const Home = (props) => {
       <div className="home-title">
         <h1>Newsfeed</h1>
       </div>
-      <Post
+      <Newsfeed
         users={props.users}
         posts={props.posts}
         comments={props.comments}

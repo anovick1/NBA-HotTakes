@@ -63,6 +63,7 @@ h1 {
   /* background-color: rgba(255, 255, 255, 0.384); */
   background-color: rgba(230, 181, 129, 0.502);
   border-radius: 20px;
+  min-width: 55vw;
 }
 
 .post img {
@@ -472,7 +473,6 @@ h2 {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -480,22 +480,13 @@ h2 {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: rgba(230, 181, 129, 0.502);
 }
 
-/* Show the dropdown menu on hover */
 .user-nav-dropdown:hover .dropdown-content {
   display: block;
 }
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-/* .user-nav-dropdown:hover .dropbtn,
-.logout-nav:hover,
-.home-nav:hover {
-  background-color: rgba(230, 181, 129, 0.502);
-} */
 
 .logout-nav,
 .home-nav {
@@ -505,4 +496,18 @@ h2 {
 .create-caption,
 .input-box {
   border: 2px solid black;
+}
+
+.pfp-name-delete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.create-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
 }

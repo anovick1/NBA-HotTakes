@@ -53,7 +53,20 @@ const CreatePost = (props) => {
     props.setPosts(update)
   }
   return (
-    <div className="login-page">
+    <div className="create-page">
+      <div className="form">
+        <h1>How to create a post</h1>
+        <p>
+          In order to properly upload a youtube video you will need to do the:
+          following
+        </p>
+        <ol>
+          <li>find the video you want to post</li>
+          <li>Click on the share button </li>
+          <li></li>
+          <img src="images/youtube-share.png" alt="share" />
+        </ol>
+      </div>
       <div className="form">
         <h1>Create a post!</h1>
         <p>Please fill out the form below</p>

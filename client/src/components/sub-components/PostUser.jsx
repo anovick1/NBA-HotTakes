@@ -1,8 +1,31 @@
 import React from 'react'
 import Likes from './Likes'
 import Comment from './CommentFeed'
+import axios from 'axios'
 
 const Post = (props) => {
+  const deletePost = async (post) => {
+    await axios.delete('http://localhost:3001/post/' + post._id, {})
+
+    const getPosts = async () => {
+      const response = await axios.get('http://localhost:3001/posts')
+      props.setPosts(response.data)
+    }
+    getPosts()
+  }
+
+  const checkDelete = (post) => {
+    if (post.user === props.currentUser._id) {
+      return (
+        <div className="delete-comment" onClick={() => deletePost(post)}>
+          ❌
+        </div>
+      )
+    } else {
+      return <div className="fake">❌</div>
+    }
+  }
+
   return (
     <div className="newsfeed">
       {props.posts
@@ -15,9 +38,12 @@ const Post = (props) => {
                 .filter((u) => u._id === post.user)
                 .map((user) => (
                   <div key={user.username} className="post-info">
-                    <div className="pfp-name">
-                      <img src={user.pfp} alt="pfp" />
-                      <h2 className="post-name">{user.name}</h2>
+                    <div className="pfp-name-delete">
+                      <div className="pfp-name">
+                        <img src={user.pfp} alt="pfp" />
+                        <h2 className="post-name">{user.name}</h2>
+                      </div>
+                      {checkDelete(post)}
                     </div>
                     <h3
                       onClick={() => props.showPost(user.username)}

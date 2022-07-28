@@ -2,8 +2,9 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Likes from './sub-components/Likes'
 import Comment from './sub-components/CommentFeed'
+import axios from 'axios'
 
-const Post = (props) => {
+const Newsfeed = (props) => {
   let navigate = useNavigate()
 
   const showPost = (user) => {
@@ -11,6 +12,27 @@ const Post = (props) => {
   }
   const showPost1 = (username) => {
     navigate(`/home/${username}`)
+  }
+  const deletePost = async (post) => {
+    await axios.delete('http://localhost:3001/post/' + post._id, {})
+
+    const getPosts = async () => {
+      const response = await axios.get('http://localhost:3001/posts')
+      props.setPosts(response.data)
+    }
+    getPosts()
+  }
+
+  const checkDelete = (post) => {
+    if (post.user === props.currentUser._id) {
+      return (
+        <div className="delete-comment" onClick={() => deletePost(post)}>
+          ❌
+        </div>
+      )
+    } else {
+      return <div className="fake">❌</div>
+    }
   }
   return (
     <div className="newsfeed">
@@ -25,9 +47,12 @@ const Post = (props) => {
                 .filter((u) => u._id === post.user)
                 .map((user) => (
                   <div key={user.username} className="post-info">
-                    <div className="pfp-name">
-                      <img src={user.pfp} alt="pfp" />
-                      <h2 className="post-name">{user.name}</h2>
+                    <div className="pfp-name-delete">
+                      <div className="pfp-name">
+                        <img src={user.pfp} alt="pfp" />
+                        <h2 className="post-name">{user.name}</h2>
+                      </div>
+                      {checkDelete(post)}
                     </div>
                     <h3
                       onClick={() => showPost(user.username)}
@@ -100,4 +125,4 @@ const Post = (props) => {
   )
 }
 
-export default Post
+export default Newsfeed

@@ -25,7 +25,7 @@ const Login = (props) => {
       id: '',
       username: username,
       name: name,
-      bio: '',
+      bio: 'I know all',
       pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg',
       tweets: []
     })
@@ -33,7 +33,7 @@ const Login = (props) => {
       id: '',
       username: username,
       name: name,
-      bio: '',
+      bio: 'I know all',
       pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg',
       tweets: []
     })
