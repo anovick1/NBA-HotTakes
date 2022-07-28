@@ -42,21 +42,16 @@ Once you fork and clone the repo:
     6.   in client run npm start
     7.   in main directory run npm run dev
 
-#### _Deployed Login Page_
+### Screenshots
 
-![Image](images/loginpage.png)
-
-#### _Deployed Homepage_
-
-![Image](images/newsfeed.png)
-
-#### _Deployed Profile page_
-
-![Image](images/profile.png)
-
-#### _Deployed Profile page_
-
-![Image](images/create.png)
+<div style="width:100vw;height:50vh;line-height:3em;overflow:scroll;padding:5px;">
+    <ul>
+        <li style="display: inline;"><img src="images/loginpage.png"></li> 
+        <li style="display: inline;"><img src="images/newsfeed.png"></li> 
+        <li style="display: inline;"><img src="images/profile.png"> </li> 
+        <li style="display: inline;"><img src="images/create.png"></li> 
+    </ul>
+</div>
 
 ---
 
