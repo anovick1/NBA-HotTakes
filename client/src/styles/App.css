@@ -504,16 +504,19 @@ h2 {
   width: 15vh;
   height: 7vh;
   margin: 2vh 10vw 2vh;
+  border: 1px solid black;
 }
 #embed {
   width: 40vh;
   height: 24vh;
   margin: 4vh 5vw 4vh;
+  border: 1px solid black;
 }
 #copy {
   width: 44vh;
   height: 50vh;
   margin: 4vh 5vw 4vh;
+  border: 1px solid black;
 }
 
 #create-form {

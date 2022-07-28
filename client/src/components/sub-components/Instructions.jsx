@@ -25,7 +25,7 @@ const Instructions = () => {
         </li>
         <img
           id="copy"
-          src="https://github.com/anovick1/NBA-HotTakes/blob/main/images/copy.png?raw=true"
+          src="https://github.com/anovick1/NBA-HotTakes/blob/main/images/copy-url.png?raw=true"
           alt="copy"
         />
       </ol>
