@@ -44,7 +44,7 @@ Once you fork and clone the repo:
 
 ### Screenshots
 
-<div style="width:850px;height:300px;line-height:3em;overflow:auto">
+<div style="width:850px;height:300px;line-height:3em;overflow:auto;float:left">
     <div  style="width: 2400px; height: 300px;">
         <img src="images/loginpage.png" width="500" height="278px">&nbsp<img src="images/newsfeed.png" width="500" height="278px">&nbsp<img src="images/profile.png" width="500" height="278px">&nbsp<img src="images/create.png" width="500" height="278px">
     </div>
