@@ -1,112 +1,65 @@
 import React, { useState } from 'react'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import Instruction from '../components/sub-components/Instructions.jsx'
+import CreateForm from '../components/sub-components/CreateForm.jsx'
 
 const CreatePost = (props) => {
-  let navigate = useNavigate()
+  const [info, setInfo] = useState(true)
+  const [create, setCreate] = useState(false)
 
-  const [title, setTitle] = useState('')
-  const [text, setText] = useState('')
-  const [video, setVideo] = useState('')
-
-  const changeTitle = (event) => {
-    let n = event.target.value
-    setTitle(n)
+  const infoClick = () => {
+    setInfo(true)
+    setCreate(false)
   }
-  const changeText = (event) => {
-    let n = event.target.value
-    setText(n)
+  const createClick = () => {
+    setInfo(false)
+    setCreate(true)
   }
 
-  const changeVideo = (event) => {
-    let n = event.target.value
-    setVideo(n)
+  const displayBar = () => {
+    if (info) {
+      return (
+        <div className="top-bar">
+          <div className="bar-selected" onClick={() => infoClick()}>
+            <h1>Instructions</h1>
+          </div>
+          <div className="bar-unselected" onClick={() => createClick()}>
+            <h1>Create Post!</h1>
+          </div>
+        </div>
+      )
+    }
+    if (create) {
+      return (
+        <div className="top-bar">
+          <div className="bar-unselected" onClick={() => infoClick()}>
+            <h1>Instructions</h1>
+          </div>
+          <div className="bar-selected" onClick={() => createClick()}>
+            <h1>Create Post!</h1>
+          </div>
+        </div>
+      )
+    }
   }
-  const handleSubmit = async (e) => {
-    addPost(e)
-    navigate(`/home`)
-  }
-  const current = new Date()
-  const date = `${
-    current.getMonth() + 1
-  }/${current.getDate()}/${current.getFullYear()}`
-
-  const addPost = async (e) => {
-    await axios.post('http://localhost:3001/post', {
-      user: props.currentUser._id,
-      title: title,
-      date: date,
-      text: text,
-      video: video,
-      likes: '0'
-    })
-    props.setNewPost({
-      user: props.currentUser._id,
-      title: title,
-      date: date,
-      text: text,
-      video: video,
-      likes: ''
-    })
-    let update = props.posts
-    update.push(props.newPost)
-    props.setPosts(update)
+  const displayFeed = () => {
+    if (info) {
+      return <Instruction />
+    } else if (create) {
+      return (
+        <CreateForm
+          currentUser={props.currentUser}
+          posts={props.posts}
+          setPosts={props.setPosts}
+          newPost={props.newPost}
+          setNewPost={props.setNewPost}
+        />
+      )
+    }
   }
   return (
     <div className="create-page">
-      <div className="form">
-        <h1>How to create a post</h1>
-        <p>
-          In order to properly upload a youtube video you will need to do the:
-          following
-        </p>
-        <ol>
-          <li>find the video you want to post</li>
-          <li>Click on the share button </li>
-          <img
-            src="https://github.com/anovick1/NBA-HotTakes/blob/main/images/youtube-share.png?raw=true"
-            alt="share"
-          />
-          <li></li>
-        </ol>
-      </div>
-      <div className="form">
-        <h1>Create a post!</h1>
-        <p>Please fill out the form below</p>
-        <div className="input-div">
-          <form onSubmit={handleSubmit}>
-            <div className="login-form">
-              <input
-                type="text"
-                value={title}
-                onChange={changeTitle}
-                name={'title'}
-                placeholder={'Title'}
-                className="input-box"
-                id="name-input"
-              />
-              <input
-                type="text"
-                value={video}
-                onChange={changeVideo}
-                name={'video'}
-                placeholder={'Paste youtube video link'}
-                className="input-box"
-                id="name-input"
-              />
-              <textarea
-                type="text-area"
-                value={text}
-                onChange={changeText}
-                name={'caption'}
-                placeholder={'Write a caption'}
-                className="create-caption"
-              />
-              <button id="form-submit">Submit</button>
-            </div>
-          </form>
-        </div>
-      </div>
+      {displayBar()}
+      {displayFeed()}
     </div>
   )
 }

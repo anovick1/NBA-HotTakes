@@ -508,6 +508,30 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   justify-content: center;
+  margin-top: 5vh;
+}
+
+#share {
+  width: 15vh;
+  height: 7vh;
+  margin: 2vh 10vw 2vh;
+}
+#embed {
+  width: 40vh;
+  height: 24vh;
+  margin: 4vh 5vw 4vh;
+}
+#copy {
+  width: 44vh;
+  height: 50vh;
+  margin: 4vh 5vw 4vh;
+}
+
+#create-form {
+  margin: 5vh 0 5vh;
+}
+
+#one {
+  margin-bottom: 3vh;
 }
