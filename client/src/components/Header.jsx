@@ -14,18 +14,31 @@ const Header = (props) => {
             <h2> Home</h2>
           </Link>
         </div>
-        <div className="user-nav">
-          <Link
-            to={'/home/' + props.currentUser.username}
-            className="user-profile"
-          >
+        <div className="user-nav-dropdown">
+          <button className="dropbtn">
             <div id="pfp">
               <img src={props.currentUser.pfp} alt="pfp" />
             </div>
             <div id="username">
-              <h2>{props.currentUser.username}</h2>
+              <h2>
+                @<span>{props.currentUser.username}</span>
+              </h2>
             </div>
-          </Link>
+          </button>
+          <div className="dropdown-content">
+            <Link
+              to={'/home/' + props.currentUser.username}
+              className="user-profile"
+            >
+              <h4>View profile</h4>
+            </Link>
+            <Link
+              to={'/home/' + props.currentUser.username}
+              className="user-profile"
+            >
+              <h4>Make post</h4>
+            </Link>
+          </div>
         </div>
       </nav>
     </header>
