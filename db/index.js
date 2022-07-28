@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-require('dotenv').config() // Add this line
+require('dotenv').config()
 
 let dbUrl =
   process.env.NODE_ENV === 'production'

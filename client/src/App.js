@@ -16,7 +16,7 @@ const App = () => {
     id: '',
     username: '',
     name: '',
-    pfp: '',
+    pfp: 'https://i.pinimg.com/originals/5a/f6/e8/5af6e8fdba154c495077521be072da2b.jpg',
     tweets: []
   })
   const [newPost, setNewPost] = useState({
