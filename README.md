@@ -2,7 +2,7 @@
 
 ## A social media dedicated to NBA Hot takes
 
-## Date: 07/28/2022
+## Date: 07/29/2022
 
 #### By: Avery Novick
 
