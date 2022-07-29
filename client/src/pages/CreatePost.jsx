@@ -5,6 +5,7 @@ import CreateForm from '../components/sub-components/CreateForm.jsx'
 const CreatePost = (props) => {
   const [info, setInfo] = useState(true)
   const [create, setCreate] = useState(false)
+  const [done, setDone] = useState(false)
 
   const infoClick = () => {
     setInfo(true)
@@ -43,7 +44,7 @@ const CreatePost = (props) => {
   }
   const displayFeed = () => {
     if (info) {
-      return <Instruction />
+      return <Instruction setInfo={setInfo} setCreate={setCreate} />
     } else if (create) {
       return (
         <CreateForm
@@ -52,6 +53,8 @@ const CreatePost = (props) => {
           setPosts={props.setPosts}
           newPost={props.newPost}
           setNewPost={props.setNewPost}
+          done={done}
+          setDone={setDone}
         />
       )
     }

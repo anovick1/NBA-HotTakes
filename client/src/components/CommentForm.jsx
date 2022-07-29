@@ -61,6 +61,7 @@ const CommentForm = (props) => {
           <button onClick={addComment}>Submit</button>
         </div>
       </div>
+      <div className="fake">❌</div>
     </div>
   )
 }

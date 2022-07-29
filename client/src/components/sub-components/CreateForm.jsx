@@ -24,7 +24,14 @@ const CreateForm = (props) => {
   }
   const handleSubmit = async (e) => {
     addPost(e)
+    props.setDone(true)
+  }
+  const goHome = async (e) => {
     navigate(`/home`)
+    props.setDone(false)
+  }
+  const goCreate = async (e) => {
+    props.setDone(false)
   }
   const current = new Date()
   const date = `${
@@ -51,46 +58,75 @@ const CreateForm = (props) => {
     let update = props.posts
     update.push(props.newPost)
     props.setPosts(update)
+    setTitle('')
+    setText('')
+    setVideo('')
   }
-  return (
-    <div className="form id" id="create-form">
-      <h1>Create a post!</h1>
-      <p>Please fill out the form below</p>
-      <div className="input-div">
-        <form onSubmit={handleSubmit}>
-          <div className="login-form">
-            <input
-              type="text"
-              value={title}
-              onChange={changeTitle}
-              name={'title'}
-              placeholder={'Title'}
-              className="input-box"
-              id="name-input"
-            />
-            <input
-              type="text"
-              value={video}
-              onChange={changeVideo}
-              name={'video'}
-              placeholder={'Paste youtube video link'}
-              className="input-box"
-              id="name-input"
-            />
-            <textarea
-              type="text-area"
-              value={text}
-              onChange={changeText}
-              name={'caption'}
-              placeholder={'Write a caption'}
-              className="create-caption"
-            />
-            <button id="form-submit">Submit</button>
+
+  const displayForm = () => {
+    if (!props.done) {
+      return (
+        <div className="form" id="create-form">
+          <h1>Create a post!</h1>
+          <p>Please fill out the form below</p>
+          <div className="input-div">
+            <form onSubmit={handleSubmit}>
+              <div className="login-form">
+                <input
+                  type="text"
+                  value={title}
+                  onChange={changeTitle}
+                  name={'title'}
+                  placeholder={'Title'}
+                  className="input-box"
+                  id="name-input"
+                />
+                <input
+                  type="text"
+                  value={video}
+                  onChange={changeVideo}
+                  name={'video'}
+                  placeholder={'Paste youtube video link'}
+                  className="input-box"
+                  id="name-input"
+                />
+                <textarea
+                  type="text-area"
+                  value={text}
+                  onChange={changeText}
+                  name={'caption'}
+                  placeholder={'Write a caption'}
+                  className="create-caption"
+                />
+                <button id="form-submit">Submit</button>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-    </div>
-  )
+        </div>
+      )
+    } else {
+      return (
+        <div className="form" id="create-form">
+          <h1>Post successful!</h1>
+          <p>You can view your post in your profile or at the home screen</p>
+          <div className="buttons">
+            <div>
+              <button id="form-submit-2" onClick={() => goHome()}>
+                Home
+              </button>
+            </div>
+            <div>
+              <button id="form-submit-2" onClick={() => goCreate()}>
+                Create Post
+              </button>
+            </div>
+          </div>
+        </div>
+      )
+    }
+  }
+
+  return <div>{displayForm()}</div>
 }
 
 export default CreateForm

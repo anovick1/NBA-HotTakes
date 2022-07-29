@@ -1,6 +1,10 @@
 import React from 'react'
 
-const Instructions = () => {
+const Instructions = (props) => {
+  const goCreate = async (e) => {
+    props.setInfo(false)
+    props.setCreate(true)
+  }
   return (
     <div className="form" id="create-form">
       <h1>How to upload a video</h1>
@@ -29,6 +33,9 @@ const Instructions = () => {
           alt="copy"
         />
       </ol>
+      <button id="form-submit-2" onClick={() => goCreate()}>
+        Create Post
+      </button>
     </div>
   )
 }
