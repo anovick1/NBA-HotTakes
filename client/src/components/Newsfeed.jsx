@@ -26,7 +26,7 @@ const Newsfeed = (props) => {
   const checkDelete = (post) => {
     if (post.user === props.currentUser._id) {
       return (
-        <div className="delete-comment" onClick={() => deletePost(post)}>
+        <div className="delete-post" onClick={() => deletePost(post)}>
           ❌
         </div>
       )

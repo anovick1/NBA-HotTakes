@@ -169,7 +169,7 @@ span {
   text-align: center;
   background-color: rgba(230, 181, 129, 0.502);
   border: 2px solid black;
-  width: 57vw;
+  width: 59vw;
   border-radius: 20px;
   margin-top: 4vh;
 }
@@ -253,8 +253,24 @@ textarea:focus {
 .delete-comment {
   margin-left: 1vw;
   cursor: pointer;
+  color: transparent;
+  padding: 1vh;
+  border-radius: 50%;
 }
-.delete-comment:hover,
+.delete-post {
+  margin-left: 1vw;
+  cursor: pointer;
+  padding: 1vh;
+  border-radius: 50%;
+}
+.delete-comment:hover {
+  color: red;
+}
+.delete-comment:active,
+.delete-post:active {
+  background-color: rgba(255, 255, 255, 0.501);
+}
+
 .post-like:hover,
 .post-dislike:hover {
   border: 1px dotted black;
@@ -267,6 +283,8 @@ textarea:focus {
 .fake {
   color: transparent;
   margin-right: 1vw;
+  padding: 1vh;
+  border-radius: 50%;
 }
 
 .post-pic-caption {
