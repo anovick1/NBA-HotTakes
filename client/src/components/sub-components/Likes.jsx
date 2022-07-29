@@ -7,22 +7,22 @@ const Likes = (props) => {
     let likes = parseInt(post.likes) + 1
 
     if (props.comment === false) {
-      await axios.put('http://localhost:3001/post/' + post._id, {
+      await axios.put('/post/' + post._id, {
         likes: likes
       })
 
       const getPosts = async () => {
-        const response = await axios.get('http://localhost:3001/posts')
+        const response = await axios.get('/posts')
         props.setPosts(response.data)
       }
       getPosts()
     } else {
-      await axios.put('http://localhost:3001/comment/' + post._id, {
+      await axios.put('/comment/' + post._id, {
         likes: likes
       })
 
       const getPosts = async () => {
-        const response = await axios.get('http://localhost:3001/comments')
+        const response = await axios.get('/comments')
         props.setComments(response.data)
       }
       getPosts()
@@ -33,22 +33,22 @@ const Likes = (props) => {
     let likes = parseInt(post.likes) - 1
 
     if (props.comment === false) {
-      await axios.put('http://localhost:3001/post/' + post._id, {
+      await axios.put('post/' + post._id, {
         likes: likes
       })
 
       const getPosts = async () => {
-        const response = await axios.get('http://localhost:3001/posts')
+        const response = await axios.get('/posts')
         props.setPosts(response.data)
       }
       getPosts()
     } else {
-      await axios.put('http://localhost:3001/comment/' + post._id, {
+      await axios.put('/comment/' + post._id, {
         likes: likes
       })
 
       const getPosts = async () => {
-        const response = await axios.get('http://localhost:3001/comments')
+        const response = await axios.get('/comments')
         props.setComments(response.data)
       }
       getPosts()

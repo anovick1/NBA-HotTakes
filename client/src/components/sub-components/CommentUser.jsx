@@ -4,10 +4,10 @@ import axios from 'axios'
 
 const Comment = (props) => {
   const deleteComment = async (comment) => {
-    await axios.delete('http://localhost:3001/comment/' + comment._id, {})
+    await axios.delete('/comment/' + comment._id, {})
 
     const getComments = async () => {
-      const response = await axios.get('http://localhost:3001/comments')
+      const response = await axios.get('/comments')
       props.setComments(response.data)
     }
     getComments()
@@ -35,7 +35,7 @@ const Comment = (props) => {
               {props.users
                 .filter((u) => u._id === comment.user)
                 .map((user) => (
-                  <div className="pfp-username" key={user.username}>
+                  <div className="pfp-username" key={user._id}>
                     <div className="comment-pfp">
                       <img src={user.pfp} alt="commenter-pfp" />
                     </div>

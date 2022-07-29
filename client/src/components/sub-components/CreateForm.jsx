@@ -51,7 +51,7 @@ const CreateForm = (props) => {
   }/${current.getDate()}/${current.getFullYear()}`
 
   const addPost = async (e) => {
-    await axios.post('http://localhost:3001/post', {
+    await axios.post('/post', {
       user: props.currentUser._id,
       title: title,
       date: date,

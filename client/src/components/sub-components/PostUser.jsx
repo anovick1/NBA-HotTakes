@@ -5,10 +5,10 @@ import axios from 'axios'
 
 const Post = (props) => {
   const deletePost = async (post) => {
-    await axios.delete('http://localhost:3001/post/' + post._id, {})
+    await axios.delete('/post/' + post._id, {})
 
     const getPosts = async () => {
-      const response = await axios.get('http://localhost:3001/posts')
+      const response = await axios.get('/posts')
       props.setPosts(response.data)
     }
     getPosts()

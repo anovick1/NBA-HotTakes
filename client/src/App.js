@@ -29,28 +29,28 @@ const App = () => {
   })
   useEffect(() => {
     const getUsers = async () => {
-      const response = await axios.get('http://localhost:3001/users')
+      const response = await axios.get('/users')
       setUsers(response.data)
     }
     getUsers()
   }, [currentUser])
   useEffect(() => {
     const getPosts = async () => {
-      const response = await axios.get('http://localhost:3001/posts')
+      const response = await axios.get('/posts')
       setPosts(response.data)
     }
     getPosts()
   }, [newPost])
   useEffect(() => {
     const getPosts = async () => {
-      const response = await axios.get('http://localhost:3001/posts')
+      const response = await axios.get('/posts')
       setPosts(response.data)
     }
     getPosts()
   }, [])
   useEffect(() => {
     const getComments = async () => {
-      const response = await axios.get('http://localhost:3001/comments')
+      const response = await axios.get('/comments')
       setComments(response.data)
     }
     getComments()

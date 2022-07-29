@@ -21,7 +21,7 @@ const Login = (props) => {
     navigate(`/home`)
   }
   const addUser = async (e) => {
-    await axios.post('http://localhost:3001/user', {
+    await axios.post('/user', {
       id: '',
       username: username,
       name: name,

@@ -7,7 +7,7 @@ const CommentForm = (props) => {
   const addComment = async (e) => {
     e.preventDefault()
 
-    await axios.post('http://localhost:3001/comments/' + props.postid, {
+    await axios.post('/comments/' + props.postid, {
       post: props.postid,
       user: props.currentUser._id,
       date: '',
@@ -16,7 +16,7 @@ const CommentForm = (props) => {
     })
 
     const getComments = async () => {
-      const response = await axios.get('http://localhost:3001/comments')
+      const response = await axios.get('/comments')
       props.setComments(response.data)
     }
     getComments()
