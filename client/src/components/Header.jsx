@@ -4,11 +4,6 @@ const Header = (props) => {
   return (
     <header>
       <nav>
-        <div className="logout-nav">
-          <Link to="/">
-            <h2> Logout</h2>
-          </Link>
-        </div>
         <div className="home-nav">
           <Link to="/home">
             <h2> Home</h2>
@@ -30,10 +25,13 @@ const Header = (props) => {
               to={'/home/' + props.currentUser.username}
               className="user-profile"
             >
-              <h4>View Profile</h4>
+              <h4>Profile</h4>
             </Link>
             <Link to={'/create-post'} className="user-profile">
               <h4>Make Post</h4>
+            </Link>
+            <Link to="/">
+              <h4>Logout</h4>
             </Link>
           </div>
         </div>

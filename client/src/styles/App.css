@@ -8,6 +8,7 @@ main {
 }
 header {
   background-color: rgba(255, 255, 255, 0.501);
+  border-bottom: 1px solid black;
 }
 nav {
   display: flex;
@@ -170,7 +171,9 @@ span {
   border: 2px solid black;
   width: 57vw;
   border-radius: 20px;
+  margin-top: 4vh;
 }
+
 .home,
 .detail {
   background-color: rgba(255, 255, 255, 0.501);
@@ -353,11 +356,14 @@ button {
 .bar-unselected:hover {
   background-color: rgba(230, 181, 129, 0.502);
   border: 2px dotted black;
+  border-radius: 20px;
 }
 
 .bar-selected {
   background-color: rgba(230, 181, 129, 0.502);
   border: 2px dotted rgba(255, 255, 255, 0.761);
+  border-radius: 20px;
+
   padding-left: 2vw;
   padding-right: 2vw;
 }
