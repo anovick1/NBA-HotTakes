@@ -54,12 +54,18 @@ const Login = (props) => {
         if (props.users[i].username === username) {
           valid2 = false
           return <h3 id="wrong">Username taken</h3>
+        } else if (name.length <= 0 && username.length <= 0) {
+          valid2 = false
+          return <h3 id="wrong">Enter Info</h3>
         } else if (username.length <= 0) {
           valid2 = false
           return <h3 id="wrong">Enter a Username</h3>
         } else if (name.length <= 0) {
           valid2 = false
           return <h3 id="wrong">Enter a Name</h3>
+        } else if (name.length <= 0 && username.length <= 0) {
+          valid2 = false
+          return <h3 id="wrong">Enter Info</h3>
         }
         valid2 = true
       }
