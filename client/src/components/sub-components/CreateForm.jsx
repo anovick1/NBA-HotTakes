@@ -8,6 +8,7 @@ const CreateForm = (props) => {
   const [title, setTitle] = useState('')
   const [text, setText] = useState('')
   const [video, setVideo] = useState('')
+  const [valid, setValid] = useState(false)
 
   const changeTitle = (event) => {
     let n = event.target.value
@@ -23,7 +24,13 @@ const CreateForm = (props) => {
     setVideo(n)
   }
   const handleSubmit = async (e) => {
-    addPost(e)
+    if (title.length > 0 && video.length > 0 && text.length > 0) {
+      setValid(true)
+      addPost(e)
+      props.setDone(true)
+    } else {
+      props.setDone(true)
+    }
     props.setDone(true)
   }
   const goHome = async (e) => {
@@ -33,6 +40,11 @@ const CreateForm = (props) => {
   const goCreate = async (e) => {
     props.setDone(false)
   }
+
+  const tryAgain = () => {
+    props.setDone(false)
+  }
+
   const current = new Date()
   const date = `${
     current.getMonth() + 1
@@ -104,10 +116,10 @@ const CreateForm = (props) => {
           </div>
         </div>
       )
-    } else {
+    } else if (props.done && valid) {
       return (
         <div className="form" id="create-form">
-          <h1>Post successful!</h1>
+          <h1>Post Successful!</h1>
           <p>You can view your post in your profile or at the home screen</p>
           <div className="buttons">
             <div>
@@ -117,7 +129,24 @@ const CreateForm = (props) => {
             </div>
             <div>
               <button id="form-submit-2" onClick={() => goCreate()}>
-                Create Post
+                Create Another Post
+              </button>
+            </div>
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <div className="form" id="create-form">
+          <h1>Post Unsuccessful!</h1>
+          <p>
+            There was a problem with your post. Make sure to fill out all the
+            information in correctly
+          </p>
+          <div className="buttons">
+            <div>
+              <button id="form-submit" onClick={() => tryAgain()}>
+                Try Again
               </button>
             </div>
           </div>
