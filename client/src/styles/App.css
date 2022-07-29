@@ -616,3 +616,9 @@ button:active {
   flex-direction: column;
   align-items: center;
 }
+
+#wrong {
+  color: red;
+  margin-top: 3vh;
+  margin-bottom: 0;
+}

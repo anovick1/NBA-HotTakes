@@ -7,6 +7,8 @@ const Login = (props) => {
 
   const [username, setUsername] = useState('')
   const [name, setName] = useState('')
+  const [submit, setSubmit] = useState()
+  let valid2 = false
 
   const changeUsername = (event) => {
     let n = event.target.value
@@ -17,8 +19,12 @@ const Login = (props) => {
     setName(n)
   }
   const handleSubmit = (e) => {
-    addUser(e)
-    navigate(`/home`)
+    e.preventDefault()
+    setSubmit(true)
+    if (valid2) {
+      addUser(e)
+      navigate(`/home`)
+    }
   }
   const addUser = async (e) => {
     await axios.post('/user', {
@@ -41,11 +47,30 @@ const Login = (props) => {
     update.push(props.currentUser)
     props.setUsers(update)
   }
+
+  const checkUsername = () => {
+    if (submit) {
+      for (let i = 0; i < props.users.length; i++) {
+        if (props.users[i].username === username) {
+          valid2 = false
+          return <h3 id="wrong">Username taken</h3>
+        } else if (username.length <= 0) {
+          valid2 = false
+          return <h3 id="wrong">Enter a Username</h3>
+        } else if (name.length <= 0) {
+          valid2 = false
+          return <h3 id="wrong">Enter a Name</h3>
+        }
+        valid2 = true
+      }
+    }
+  }
   return (
     <div className="login-page">
       <div className="form">
         <h1>Welcome to NBA Hot Takes</h1>
         <p>A social media dedicated to NBA hot takes!</p>
+        {checkUsername()}
         <div className="input-div">
           <form onSubmit={handleSubmit}>
             <div className="login-form">
