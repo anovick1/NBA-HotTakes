@@ -307,6 +307,7 @@ textarea:focus {
 .fake-right {
   margin-left: 1vw;
   color: transparent;
+  margin-right: 1vw;
 }
 
 .login-form {
@@ -608,4 +609,10 @@ button:active {
 
 #wrong {
   color: red;
+}
+
+.comment-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
