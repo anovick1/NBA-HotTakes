@@ -46,7 +46,7 @@ Once you fork and clone the repo:
 
 <div style= "center">
     <pre>
-        <img src="images/loginpage.png"  height="350">&nbsp;&nbsp;&nbsp;<img src="images/newsfeed.png.cloud" height="350">&nbsp;&nbsp;&nbsp;<img src="images/profile.png" height="350">&nbsp;&nbsp;&nbsp;<img src="images/create.png" height="350">
+        <img src="images/loginpage.png"  height="350">&nbsp;&nbsp;&nbsp;<img src="images/newsfeed.png" height="350">&nbsp;&nbsp;&nbsp;<img src="images/profile.png" height="350">&nbsp;&nbsp;&nbsp;<img src="images/create.png" height="350">
     </pre>
 </div>
 
