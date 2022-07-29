@@ -73,9 +73,10 @@ Once you fork and clone the repo:
 
 - [x] Implement twitter API
 - [x] Create a post feature
+- [ ] Give option to view post of user specific comments
 - [ ] Ask for user's twitter username to generate their tweets
-- [ ] add picutres to posts
-- [ ] allow users to dm each other
+- [ ] Add picutres to posts
+- [ ] Allow users to dm each other
 
 ---
 
