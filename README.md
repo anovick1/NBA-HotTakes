@@ -8,7 +8,7 @@
 
 #### [<img src = "https://library.kissclipart.com/20190908/aee/kissclipart-github-icon-logo-icon-media-icon-b93d26ddc375e57b.png" height = "25px">](https://github.com/anovick1) [<img src = "https://cdn-icons-png.flaticon.com/512/174/174857.png" height = "25px">](https://www.linkedin.com/in/avery-novick-8651a7176/)
 
-<a href="https://novick-nba-app.herokuapp.com/" target="_blank" rel="noreferrer">Deployed Website</a>
+<a href="https://nbahottakesnovick.web.app/" target="_blank" rel="noreferrer">Deployed Website</a>
 
 ---
 
